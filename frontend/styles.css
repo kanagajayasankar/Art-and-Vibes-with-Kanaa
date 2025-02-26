@@ -131,90 +131,70 @@ section {
 }
 
 /* ========== POLAROID STYLE FLIP CARDS ========== */
-/* Flip Card Container */
+/* 🎴 Flip Card Styles */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
-    background: url('images/cards_background.jpg') no-repeat center center/cover;
+    gap: 25px; /* Adds space between cards */
+    padding: 20px;
 }
 
-/* Individual Card (Polaroid Style) */
-.card {
-    width: 160px; /* Slightly smaller width */
-    height: 220px; /* Slightly smaller height */
-    perspective: 1000px;
+/* 🃏 Smaller Card Size - Fits in 2 Rows */
+.activity-card {
+    width: 200px;
+    height: 300px;
+    perspective: 1200px; /* Perspective for 3D effect */
     position: relative;
-    background: white; /* Polaroid effect */
-    padding: 10px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    border-radius: 5px;
+    margin: 10px; /* Adds space between cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-
-/* Inner Card (For Flipping) */
+/* 🎴 Flip Animation */
 .card-inner {
     width: 100%;
     height: 100%;
-    position: absolute;
-    transition: transform 0.6s;
     transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+    position: relative;
+    transform-origin: center; /* Ensures flipping happens in place */
 }
 
-.card.flipped .card-inner {
+/* When the card is flipped */
+.activity-card.flipped .card-inner {
     transform: rotateY(180deg);
 }
 
-/* Card Front & Back */
-.card-front,
-.card-back {
+/* Front and back of the card */
+.card-front, .card-back {
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 🎨 Polaroid Style Front */
+.card-front {
+    padding: 10px;
+    background: linear-gradient(135deg, #F2E6FF, #FFE6F2);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding-bottom: 10px;
-}
-
-/* Front Side */
-.card-front {
-    transform: rotateY(0deg);
-}
-
-/* Back Side */
-.card-back {
-    transform: rotateY(180deg);
-    padding: 15px;
-    text-align: center;
-}
-
-/* Image Styling (Crop and Fit in Frame) */
-.card img {
-    width: 100%; /* Ensure it takes the full width of the card (180px) */
-    height: 140px; /* Adjust height so it fits inside the card */
-    object-fit: cover; /* Ensures the image is cropped properly */
-    border-radius: 5px;
-}
-
-
-/* Activity Name (Polaroid White Section) */
-.activity-name {
-    width: 100%;
-    text-align: center;
-    font-size: 12px; /* Slightly smaller text */
-    font-weight: bold;
-    padding: 10px 0;
-    background: white;
+    padding-bottom: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
