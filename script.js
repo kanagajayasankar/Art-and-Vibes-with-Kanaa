@@ -1,12 +1,10 @@
-const API_URL = "https://art-and-vibes.onrender.com"; // Replace with your Render URL
+const backendURL = "https://art-and-vibes.onrender.com/";
+ // Replace with your Render URL
 
-fetch(`${API_URL}/api/activities`)
-    .then(response => response.json())
-    .then(data => {
-        console.log("Fetched activities:", data);
-        // TODO: Update frontend to display activities dynamically
-    })
-    .catch(error => console.error("Error fetching activities:", error));
+fetch(`${backendURL}api/your-endpoint`)
+  .then(response => response.json())
+  .then(data => console.log(data));
+
 
 // Select all activity cards
 const cards = document.querySelectorAll(".activity-card");
