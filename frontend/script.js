@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     const activityList = document.getElementById("activity-list");
 
     try {
-        const response = await fetch("https://art-and-hobby.onrender.com/api/activities");
+        const response = await fetch("https://art-and-vibes.onrender.com/some-endpoint");
+        
+
         const activities = await response.json();
 
         activities.forEach(activity => {
