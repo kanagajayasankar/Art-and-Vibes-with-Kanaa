@@ -51,6 +51,72 @@ body {
     background-color: #fff;
     transform: rotateY(180deg);
     display: flex;
+
+/* Landing Page Styles */
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
+}
+
+.landing-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.landing h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.landing p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff4b4b;
+}
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
