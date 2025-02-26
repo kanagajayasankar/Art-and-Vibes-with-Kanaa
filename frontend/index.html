@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art & Hobby</title>
+    <title>Art and Vibes</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Art & Hobby</h1>
-        <nav>
-            <a href="#activities">Activities</a>
-        </nav>
-    </header>
 
-    <section id="activities" class="activities-container">
-        <h2>Explore Activities</h2>
-        <div id="activity-list" class="activity-grid"></div>
-    </section>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <script src="script.js"></script>
+<section class="activities-container" id="activities">
+    <h2>Choose Your Art Experience</h2>
+    <div class="card-container">
+        <!-- Cards will be inserted dynamically from script.js -->
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Art and Vibes. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
