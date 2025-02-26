@@ -1,35 +1,43 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    const activitiesContainer = document.querySelector(".card-container");
+    // Fetch activities from backend
+    const response = await fetch("https://art-and-vibes.onrender.com/activities");
+    const activities = await response.json();
 
-    try {
-        const response = await fetch("https://art-and-vibes.onrender.com/activities");
-        const activities = await response.json();
+    const cardContainer = document.querySelector(".card-container");
 
-        activities.forEach(activity => {
-            const card = document.createElement("div");
-            card.classList.add("activity-card");
+    activities.forEach(activity => {
+        const card = document.createElement("div");
+        card.classList.add("activity-card");
 
-            card.innerHTML = `
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="${activity.image}" alt="${activity.name}">
-                    </div>
-                    <div class="card-back">
-                        <h3>${activity.name}</h3>
-                        <p>${activity.description}</p>
-                        <p><strong>Price:</strong> ${activity.price}</p>
-                    </div>
+        card.innerHTML = `
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="${activity.image}" alt="${activity.name}" class="activity-image">
                 </div>
-            `;
+                <div class="card-back">
+                    <h3>${activity.name}</h3>
+                    <p>${activity.description}</p>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+            <p class="polaroid-title">${activity.name}</p>
+        `;
 
-            card.addEventListener("click", () => {
-                card.classList.toggle("flipped");
-            });
-
-            activitiesContainer.appendChild(card);
+        // Flip effect
+        card.addEventListener("click", () => {
+            card.classList.toggle("flipped");
         });
 
-    } catch (error) {
-        console.error("Error loading activities:", error);
-    }
+        cardContainer.appendChild(card);
+    });
+});
+
+// Smooth Scroll for Navigation
+document.querySelectorAll("nav a").forEach(anchor => {
+    anchor.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
 });
