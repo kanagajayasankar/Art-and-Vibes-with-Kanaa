@@ -7,3 +7,14 @@ fetch(`${API_URL}/api/activities`)
         // TODO: Update frontend to display activities dynamically
     })
     .catch(error => console.error("Error fetching activities:", error));
+
+// Select all activity cards
+const cards = document.querySelectorAll(".activity-card");
+
+// Add click event to each card
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        card.classList.toggle("flipped");
+        console.log("Card flipped:", card);  // 👈 Debugging Log
+    });
+});
