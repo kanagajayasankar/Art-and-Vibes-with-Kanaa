@@ -1,31 +1,26 @@
-fetch("https://art-and-vibes.onrender.com/")
-  .then(response => response.text()) // Change from JSON to text to debug
-  .then(data => console.log("Backend response:", data))
-  .catch(error => console.error("Error fetching backend:", error));
-
-
-// Select all activity cards
-const cards = document.querySelectorAll(".activity-card");
-
-// Add click event to each card
-cards.forEach(card => {
-    card.addEventListener("click", () => {
-        card.classList.toggle("flipped");
-        console.log("Card flipped:", card);  // 👈 Debugging Log
-    });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Flip Card Logic
-    const cards = document.querySelectorAll(".activity-card");
+    console.log("JavaScript Loaded!");
 
-    cards.forEach(card => {
-        card.addEventListener("click", () => {
+    // Smooth Scroll
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (event) {
+            event.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Flip Card Effect
+    document.querySelectorAll('.activity-card').forEach(card => {
+        card.addEventListener("click", function () {
             card.classList.toggle("flipped");
         });
     });
 
-    // Ensure Images Load
-    console.log("JavaScript Loaded. Checking images...");
+    // Fetch data from backend
+    fetch("https://art-and-hobby.onrender.com/api/data")
+        .then(response => response.json())
+        .then(data => console.log("Backend Response:", data))
+        .catch(error => console.error("Error fetching data:", error));
 });
-
