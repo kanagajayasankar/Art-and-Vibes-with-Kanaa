@@ -136,17 +136,71 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    padding: 40px;
+    background: url('images/cards_background.jpg') no-repeat center center/cover;
 }
 
-.card {
-    background: #fff;
-    width: 250px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-size: 1rem;
-    transition: transform 0.3s;
+.activity-card {
+    width: 250px; /* Reduce card width */
+    height: 350px; /* Reduce card height */
+    perspective: 1000px;
+}
 
-::contentReference[oaicite:0]{index=0}
- 
+.activity-card .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.activity-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.activity-card .card-front,
+.activity-card .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.activity-card .card-front {
+    transform: rotateY(0deg);
+}
+
+.activity-card .card-back {
+    transform: rotateY(180deg);
+}
+
+.activity-card img {
+    width: 100%;  /* Makes sure image fits card */
+    height: auto; /* Maintains aspect ratio */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Polaroid Effect */
+.activity-card .card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: white;
+    padding-bottom: 20px;
+}
+
+.activity-card .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
