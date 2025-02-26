@@ -131,6 +131,7 @@ section {
 }
 
 /* ========== POLAROID STYLE FLIP CARDS ========== */
+/* Flip Card Container */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -140,9 +141,10 @@ section {
     background: url('images/cards_background.jpg') no-repeat center center/cover;
 }
 
+/* Individual Card */
 .card {
     width: 250px;
-    height: 320px;
+    height: 350px;
     perspective: 1000px;
     position: relative;
 }
@@ -185,23 +187,24 @@ section {
     text-align: center;
 }
 
-/* Image inside the Polaroid Frame */
+/* Image Styling */
 .card img {
     width: 100%;
     height: 80%;
-    object-fit: cover; /* Crop and fit image properly */
+    object-fit: cover; /* Ensures image covers the area uniformly */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
-/* Activity Name in White Space Below Image */
+/* Activity Name Styling */
 .activity-name {
     font-size: 16px;
     font-weight: bold;
     padding: 8px 0;
 }
 
-/* ========== CONTACT FORM STYLES ========== */
+
+/* Contact Section */
 #contact {
     display: flex;
     justify-content: center;
@@ -209,6 +212,7 @@ section {
     padding: 40px 20px;
 }
 
+/* Contact Form Container */
 .contact-form {
     background: white;
     padding: 20px;
@@ -218,6 +222,7 @@ section {
     max-width: 400px;
 }
 
+/* Input and Textarea Styling */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -228,6 +233,7 @@ section {
     font-size: 16px;
 }
 
+/* Submit Button Styling */
 .contact-form button {
     width: 100%;
     padding: 12px;
