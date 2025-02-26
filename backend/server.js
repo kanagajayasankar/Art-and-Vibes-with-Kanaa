@@ -2,36 +2,44 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 app.use(cors());
 app.use(express.json());
 
-// Mock activity data
+// Sample activities data
 const activities = [
     {
         id: 1,
         name: "Van Gogh Painting",
-        description: "Create a masterpiece in the style of Van Gogh.",
-        image: "https://raw.githubusercontent.com/kanagajayasankar/art-and-hobby/main/frontend/images/van-gogh.jpg"
+        image: "https://art-and-vibes.netlify.app/images/van_gogh_painting.jpg",
+        description: "Recreate Van Gogh's masterpieces on canvas.",
+        price: "₹1500"
     },
     {
         id: 2,
         name: "Turkish Mosaic Art",
-        description: "Design beautiful mosaic art inspired by Turkish culture.",
-        image: "https://raw.githubusercontent.com/kanagajayasankar/art-and-hobby/main/frontend/images/turkish-mosaic.jpg"
+        image: "https://art-and-vibes.netlify.app/images/mosaic_art.jpg",
+        description: "Create a beautiful mosaic piece with colorful tiles.",
+        price: "₹1300"
     },
     {
         id: 3,
         name: "Tote Bag Painting",
-        description: "Personalize your own tote bag with artistic designs.",
-        image: "https://raw.githubusercontent.com/kanagajayasankar/art-and-hobby/main/frontend/images/tote-bag.jpg"
+        image: "https://art-and-vibes.netlify.app/images/tote_bag_painting.jpg",
+        description: "Design and paint your own tote bag.",
+        price: "₹1100"
     }
 ];
 
-// API to get activities
-app.get("/api/activities", (req, res) => {
+// API endpoint for activities
+app.get("/activities", (req, res) => {
     res.json(activities);
+});
+
+// Root route for checking if backend is working
+app.get("/", (req, res) => {
+    res.send("Backend is running successfully!");
 });
 
 // Start the server
