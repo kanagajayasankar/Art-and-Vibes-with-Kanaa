@@ -1,12 +1,8 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    console.log("JavaScript Loaded. Fetching activities...");
-
-    const activityList = document.getElementById("activity-list");
+    const activitiesContainer = document.querySelector(".card-container");
 
     try {
-        const response = await fetch("https://art-and-vibes.onrender.com/some-endpoint");
-        
-
+        const response = await fetch("https://art-and-vibes.onrender.com/activities");
         const activities = await response.json();
 
         activities.forEach(activity => {
@@ -14,11 +10,15 @@ document.addEventListener("DOMContentLoaded", async function () {
             card.classList.add("activity-card");
 
             card.innerHTML = `
-                <div class="front">
-                    <img src="${activity.image}" alt="${activity.name}">
-                </div>
-                <div class="back">
-                    <p>${activity.description}</p>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="${activity.image}" alt="${activity.name}">
+                    </div>
+                    <div class="card-back">
+                        <h3>${activity.name}</h3>
+                        <p>${activity.description}</p>
+                        <p><strong>Price:</strong> ${activity.price}</p>
+                    </div>
                 </div>
             `;
 
@@ -26,11 +26,10 @@ document.addEventListener("DOMContentLoaded", async function () {
                 card.classList.toggle("flipped");
             });
 
-            activityList.appendChild(card);
+            activitiesContainer.appendChild(card);
         });
 
-        console.log("Activities loaded successfully.");
     } catch (error) {
-        console.error("Error fetching activities:", error);
+        console.error("Error loading activities:", error);
     }
 });
