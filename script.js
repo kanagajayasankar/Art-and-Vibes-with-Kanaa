@@ -1,9 +1,7 @@
-const backendURL = "https://art-and-vibes.onrender.com/";
- // Replace with your Render URL
-
-fetch(`${backendURL}api/your-endpoint`)
-  .then(response => response.json())
-  .then(data => console.log(data));
+fetch("https://art-and-vibes.onrender.com/")
+  .then(response => response.text()) // Change from JSON to text to debug
+  .then(data => console.log("Backend response:", data))
+  .catch(error => console.error("Error fetching backend:", error));
 
 
 // Select all activity cards
