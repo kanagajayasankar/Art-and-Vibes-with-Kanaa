@@ -130,77 +130,116 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Polaroid Style Cards */
+/* ========== POLAROID STYLE FLIP CARDS ========== */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 40px;
+    padding: 40px 20px;
     background: url('images/cards_background.jpg') no-repeat center center/cover;
 }
 
-.activity-card {
-    width: 250px; /* Reduce card width */
-    height: 350px; /* Reduce card height */
+.card {
+    width: 250px;
+    height: 320px;
     perspective: 1000px;
+    position: relative;
 }
 
-.activity-card .card-inner {
+.card-inner {
     width: 100%;
     height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
+    position: absolute;
     transition: transform 0.6s;
+    transform-style: preserve-3d;
 }
 
-.activity-card.flipped .card-inner {
+.card.flipped .card-inner {
     transform: rotateY(180deg);
 }
 
-.activity-card .card-front,
-.activity-card .card-back {
+.card-front,
+.card-back {
     width: 100%;
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
     background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-bottom: 15px;
 }
 
-.activity-card .card-front {
+.card-front {
     transform: rotateY(0deg);
 }
 
-.activity-card .card-back {
+.card-back {
     transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
 }
 
-.activity-card img {
-    width: 100%;  /* Makes sure image fits card */
-    height: auto; /* Maintains aspect ratio */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+/* Image inside the Polaroid Frame */
+.card img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover; /* Crop and fit image properly */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
-/* Polaroid Effect */
-.activity-card .card-front {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background: white;
-    padding-bottom: 20px;
-}
-
-.activity-card .card-title {
+/* Activity Name in White Space Below Image */
+.activity-name {
     font-size: 16px;
     font-weight: bold;
-    margin-top: 10px;
-    text-align: center;
+    padding: 8px 0;
+}
+
+/* ========== CONTACT FORM STYLES ========== */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.contact-form {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
 }
