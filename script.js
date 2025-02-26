@@ -1,4 +1,4 @@
-const API_URL = "https://artandvibes-api.onrender.com"; // Replace with your Render URL
+const API_URL = "https://art-and-vibes.onrender.com"; // Replace with your Render URL
 
 fetch(`${API_URL}/api/activities`)
     .then(response => response.json())
