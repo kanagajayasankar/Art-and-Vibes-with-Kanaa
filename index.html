@@ -3,115 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art & Vibes</title>
+    <title>Art and Hobby</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-<header>
+    <!-- Navigation -->
     <nav>
+        <h1>Art and Hobby</h1>
         <ul>
-            <li><a href="#home">Home</a></li>
             <li><a href="#activities">Activities</a></li>
-            <li><a href="#booking">Book Now</a></li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-</header>
 
-<!-- Background Video Section -->
-<section id="home">
-    <video autoplay muted loop playsinline preload="auto">
-        <source src="videos/background_video.mp4" type="video/mp4">
-    </video>
-    <div class="overlay">
-        <h1>Welcome to Art & Vibes</h1>
-        <p>"I'll bring the art, you bring the vibes!"</p>
-        <p>Relax, Create, and Enjoy Your Artistic Journey</p>
-    </div>
-</section>
-
-<!-- Activities Section -->
-<section class="activities-container" id="activities">
-    <h2>Choose Your Art Experience</h2>
-    <div class="card-container">
-
-        <!-- Van Gogh Starry Night -->
+    <!-- Activities Section -->
+    <section id="activities" class="activities-container">
+        <h2>Our Activities</h2>
+        
         <div class="activity-card">
-            <div class="card-inner">
+            <div class="card-content">
                 <div class="card-front">
-                    <img src="./images/van_gogh_painting.jpg" alt="Van Gogh Painting">
-                <div class="caption">Van Gogh’s Starry Night</div>
+                    <img src="https://raw.githubusercontent.com/kanagajayasankar/art-and-vibes/main/images/van-gogh.jpg" alt="Van Gogh Painting">
+                    <h3>Van Gogh Painting</h3>
                 </div>
-            <div class="card-back">
-                    <h3>Van Gogh’s Starry Night</h3>
-                    <p>Recreate Van Gogh’s masterpiece on canvas.</p>
-                    <p><strong>Price:</strong> ₹1500</p>
+                <div class="card-back">
+                    <p>Experience the beauty of Van Gogh’s painting style.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Tote Bag Painting -->
         <div class="activity-card">
-            <div class="card-inner">
+            <div class="card-content">
                 <div class="card-front">
-                    <img src="/images/tote_bag_painting.jpg" alt="Tote Bag Painting">
-                    <div class="caption">Tote Bag Painting</div>
-                </div>
-                <div class="card-back">
-                    <h3>Tote Bag Painting</h3>
-                    <p>Design and paint your own tote bag.</p>
-                    <p><strong>Price:</strong> ₹1100</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Turkish Mosaic Art -->
-        <div class="activity-card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="./images/mosaic_art.jpg" alt="Turkish Mosaic Art">
-                    <div class="caption">Turkish Mosaic Art</div>
-                </div>
-                <div class="card-back">
+                    <img src="https://raw.githubusercontent.com/kanagajayasankar/art-and-vibes/main/images/turkish-mosaic.jpg" alt="Turkish Mosaic Art">
                     <h3>Turkish Mosaic Art</h3>
-                    <p>Create a beautiful mosaic piece with colorful tiles.</p>
-                    <p><strong>Price:</strong> ₹1300</p>
+                </div>
+                <div class="card-back">
+                    <p>Learn the traditional techniques of Turkish mosaic art.</p>
                 </div>
             </div>
         </div>
 
-    </div>
-</section>
+        <div class="activity-card">
+            <div class="card-content">
+                <div class="card-front">
+                    <img src="https://raw.githubusercontent.com/kanagajayasankar/art-and-vibes/main/images/tote-bag.jpg" alt="Tote Bag Painting">
+                    <h3>Tote Bag Painting</h3>
+                </div>
+                <div class="card-back">
+                    <p>Customize your own tote bag with artistic designs.</p>
+                </div>
+            </div>
+        </div>
 
-<!-- Booking Section -->
-<section id="booking">
-    <h2>Book Your Art Experience</h2>
-    <form id="booking-form">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="tel" id="phone" placeholder="Phone Number" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <select id="activity">
-            <option value="Van Gogh">Van Gogh’s Starry Night - ₹1500</option>
-            <option value="Tote Bag">Tote Bag Painting - ₹1100</option>
-            <option value="Mosaic">Turkish Mosaic Art - ₹1300</option>
-        </select>
-        <button type="submit">Submit</button>
-    </form>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: artandvibes@gmail.com</p>
-    <p>Instagram: @artandvibes</p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Art & Vibes. All rights reserved.</p>
-</footer>
+    </section>
 
 </body>
 </html>
