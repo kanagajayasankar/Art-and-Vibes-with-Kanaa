@@ -142,8 +142,8 @@ section {
 
 /* 🃏 Adjusted Flip Card Size - Bigger Polaroid */
 .activity-card {
-    width: 200px; /* Increased width */
-    height: 260px; /* Increased height */
+    width: 250px; /* Increased width */
+    height: 320px; /* Increased height */
     perspective: 1200px;
     position: relative;
     display: flex;
@@ -178,37 +178,40 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
 }
 
 /* 🎨 Polaroid Style Front */
 .card-front {
     background: white;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-bottom: 20px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* 📸 Image Inside Polaroid */
 .card-front img {
-    width: 180px; /* Make image bigger */
-    height: 180px;
+    width: 220px; /* Adjust image width to fit */
+    height: 220px; /* Adjust image height */
     object-fit: cover; /* Ensures images crop properly */
     border-radius: 5px;
 }
 
-/* ✍️ Activity Name Below Image */
+/* ✍️ Activity Name in White Space Below Image */
 .card-front .activity-name {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     color: #333;
     margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background: white; /* Ensure the text stays in the white space */
 }
 
 /* 🏷️ Card Back - Description & Price */
@@ -216,6 +219,10 @@ section {
     background: #f4f4f4;
     transform: rotateY(180deg);
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 📄 Description Text */
@@ -231,6 +238,9 @@ section {
     font-weight: bold;
     color: #f39c12;
 }
+
+
+
 
     
 
