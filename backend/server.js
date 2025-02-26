@@ -13,19 +13,19 @@ const activities = [
         id: 1,
         name: "Van Gogh Painting",
         description: "Create a masterpiece in the style of Van Gogh.",
-        image: "https://raw.githubusercontent.com/kanagajayasankar/art-and-hobby/main/images/van-gogh.jpg"
+        image: "https://raw.githubusercontent.com/kanagajayasankar/art-and-hobby/main/frontend/images/van-gogh.jpg"
     },
     {
         id: 2,
         name: "Turkish Mosaic Art",
         description: "Design beautiful mosaic art inspired by Turkish culture.",
-        image: "https://raw.githubusercontent.com/kanagajayasankar/art-and-hobby/main/images/turkish-mosaic.jpg"
+        image: "https://raw.githubusercontent.com/kanagajayasankar/art-and-hobby/main/frontend/images/turkish-mosaic.jpg"
     },
     {
         id: 3,
         name: "Tote Bag Painting",
         description: "Personalize your own tote bag with artistic designs.",
-        image: "https://raw.githubusercontent.com/kanagajayasankar/art-and-hobby/main/images/tote-bag.jpg"
+        image: "https://raw.githubusercontent.com/kanagajayasankar/art-and-hobby/main/frontend/images/tote-bag.jpg"
     }
 ];
 
