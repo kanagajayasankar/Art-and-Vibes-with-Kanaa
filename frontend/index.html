@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <!-- Navigation Menu -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Landing Page Section -->
-    <section class="landing">
+    <section class="landing" id="home">
         <video autoplay loop muted playsinline class="background-video">
             <source src="videos/background_video.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -24,37 +34,41 @@
         </div>
     </section>
 
+    <!-- Activities Section -->
+    <section class="activities-container" id="activities">
+        <h2>Choose Your Art Experience</h2>
+        <div class="card-container">
+            <!-- Cards will be inserted dynamically from script.js -->
+        </div>
+    </section>
 
-<header>
-    <nav>
-        <ul>
-            <li><a href="#activities">Activities</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Gallery Section -->
+    <section class="gallery-container" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Placeholder boxes for future images -->
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <!-- Add more as needed -->
+        </div>
+    </section>
 
-<section class="activities-container" id="activities">
-    <h2>Choose Your Art Experience</h2>
-    <div class="card-container">
-        <!-- Cards will be inserted dynamically from script.js -->
-    </div>
-</section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Submit</button>
-    </form>
-</section>
-
-<footer>
-    <p>&copy; 2025 Art and Vibes. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Art and Vibes. All rights reserved.</p>
+    </footer>
     <script src="script.js" defer></script>
 </body>
 </html>
