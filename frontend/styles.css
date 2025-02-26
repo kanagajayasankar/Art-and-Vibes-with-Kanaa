@@ -143,11 +143,18 @@ section {
 
 /* Individual Card (Polaroid Style) */
 .card {
-    width: 180px; /* Reduced width */
-    height: 250px; /* Reduced height */
+    width: 160px; /* Slightly smaller width */
+    height: 220px; /* Slightly smaller height */
     perspective: 1000px;
     position: relative;
+    background: white; /* Polaroid effect */
+    padding: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 5px;
 }
+
+
 
 /* Inner Card (For Flipping) */
 .card-inner {
@@ -193,11 +200,12 @@ section {
 
 /* Image Styling (Crop and Fit in Frame) */
 .card img {
-    width: 90%; /* Keep images inside card */
-    height: 65%; /* Reduce image height */
-    object-fit: cover; /* Crop images to fit properly */
+    width: 100%; /* Ensure it takes the full width of the card (180px) */
+    height: 140px; /* Adjust height so it fits inside the card */
+    object-fit: cover; /* Ensures the image is cropped properly */
     border-radius: 5px;
 }
+
 
 /* Activity Name (Polaroid White Section) */
 .activity-name {
