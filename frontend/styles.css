@@ -141,14 +141,15 @@ section {
     background: url('images/cards_background.jpg') no-repeat center center/cover;
 }
 
-/* Individual Card */
+/* Individual Card (Polaroid Style) */
 .card {
-    width: 250px;
-    height: 350px;
+    width: 220px; /* Reduced width */
+    height: 280px; /* Reduced height */
     perspective: 1000px;
     position: relative;
 }
 
+/* Inner Card (For Flipping) */
 .card-inner {
     width: 100%;
     height: 100%;
@@ -161,6 +162,7 @@ section {
     transform: rotateY(180deg);
 }
 
+/* Card Front & Back */
 .card-front,
 .card-back {
     width: 100%;
@@ -174,42 +176,37 @@ section {
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
+/* Front Side */
 .card-front {
     transform: rotateY(0deg);
 }
 
+/* Back Side */
 .card-back {
     transform: rotateY(180deg);
-    padding: 20px;
+    padding: 15px;
     text-align: center;
 }
 
-/* Image Styling */
+/* Image Styling (Crop and Fit in Frame) */
 .card img {
-    width: 100%;
-    height: 80%;
-    object-fit: cover; /* Ensures image covers the area uniformly */
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    width: 90%; /* Ensure image fits inside the card */
+    height: 70%; /* Reduce image height */
+    object-fit: cover; /* Crop images to fit */
+    border-radius: 5px;
 }
 
-/* Activity Name Styling */
+/* Activity Name (Polaroid White Section) */
 .activity-name {
-    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
     font-weight: bold;
-    padding: 8px 0;
-}
-
-
-/* Contact Section */
-#contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+    padding: 10px 0;
+    background: white;
 }
 
 /* Contact Form Container */
