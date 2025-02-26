@@ -16,3 +16,18 @@ cards.forEach(card => {
         console.log("Card flipped:", card);  // 👈 Debugging Log
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Flip Card Logic
+    const cards = document.querySelectorAll(".activity-card");
+
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            card.classList.toggle("flipped");
+        });
+    });
+
+    // Ensure Images Load
+    console.log("JavaScript Loaded. Checking images...");
+});
+
