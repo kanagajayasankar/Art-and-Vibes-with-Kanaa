@@ -110,7 +110,7 @@ html {
 .workshop-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     max-width: 90%;
     margin: auto;
     padding: 50px 0;
@@ -119,15 +119,32 @@ html {
 
 /* Flip Cards - Align Left */
 .flip-cards {
-    flex: 1; /* Takes 50% of the width */
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Aligns cards to the left */
+    gap: 20px;
+    justify-content: flex-start; /* Keeps cards aligned to the left */
+}
+
+/* Card Container - Arrange Cards Side by Side */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+/* Activity Cards */
+.activity-card {
+    width: 250px; /* Wider cards */
+    height: 350px; /* Adjust if needed */
+    flex: 1 1 calc(33.33% - 20px); /* Makes them fit in a row */
+    max-width: 280px; /* Ensures cards do not become too large */
 }
 
 /* Description - Align Right */
 .workshop-description {
-    flex: 1; /* Takes 50% of the width */
+    flex: 1;
+    max-width: 40%;
     text-align: left;
     padding: 20px;
     background: rgba(255, 255, 255, 0.8);
@@ -146,6 +163,7 @@ html {
     color: #555;
     line-height: 1.6;
 }
+
 
 
 .activities-container {
