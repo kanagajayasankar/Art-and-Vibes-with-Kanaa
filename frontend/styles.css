@@ -102,8 +102,7 @@ section {
 }
 
 .activities-container {
-    background: url('images/faded_background.jpg') no-repeat center center/cover;
-    opacity: 0.8; /* Adjust opacity for better visibility */
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
     padding: 60px 20px;
 }
 
@@ -230,6 +229,10 @@ section {
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.gallery-container {
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
+    padding: 60px 20px;
+}
 
 /* 🔥 Your Experience With Us - Scrolling Reviews Section */
 .experience-container {
@@ -312,7 +315,6 @@ section {
 /* Ensure form is centered */
 .contact-form {
     margin: auto;
-    background: white;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -342,6 +344,11 @@ section {
 
 .contact-form button:hover {
     background: #e67e22;
+}
+
+.contact-container {
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
+    padding: 60px 20px;
 }
 
 /* Footer */
