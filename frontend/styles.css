@@ -123,10 +123,11 @@ section {
 }
 
 .activity-card {
+     position: relative;
     width: 280px;
-    height: 380px;
+    height: 400px;
     perspective: 1200px;
-    position: relative;
+   
 }
 
 .card-inner {
@@ -176,12 +177,12 @@ section {
     border-radius: 8px;
 }
 /* Fix Activity Name Position */
-.card-front .activity-name {
-    position: absolute;  /* Position it on top of the Polaroid frame */
-    bottom: 10px; /* Moves it closer to the bottom */
+   .activity-name {
+    position: absolute;
+    top: calc(100% - 40px); /* Position it below the card */
     left: 50%;
-    transform: translateX(-50%); /* Centers the text */
-    width: 90%; /* Adjust width for better fit */
+    transform: translateX(-50%);
+    width: 100%;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
@@ -190,8 +191,10 @@ section {
     padding: 8px;
     border-radius: 6px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
-    z-index: 2; /* Ensures it stays on top */
+    z-index: 5; /* Ensure it appears above the card */
 }
+
+
 
 .card-back {
     background: #f8f8f8;
