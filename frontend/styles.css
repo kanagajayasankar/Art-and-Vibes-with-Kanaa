@@ -304,6 +304,12 @@ section {
 
 
 /* Contact Form */
+
+.contact {
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3) !important; /* Light Purple to Pink */
+    padding: 60px 20px;
+}
+
 .contact-container {
     display: flex;
     justify-content: center;
@@ -347,8 +353,12 @@ section {
 }
 
 .contact-container {
-    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
+    width: 100%;
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3) !important;
     padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Footer */
