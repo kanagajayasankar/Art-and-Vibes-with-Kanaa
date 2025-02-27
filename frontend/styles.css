@@ -282,25 +282,6 @@ html {
 }
 
 /* Gallery */
-/* Gallery Card */
-.gallery-card {
-    min-width: 300px;
-    max-width: 320px;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    scroll-snap-align: center;
-}
-
-/*workshop-image */
-.gallery-img {
-    width: 290px;
-    height: 310px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
 .gallery-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
     padding: 30px 10px;
@@ -320,6 +301,27 @@ html {
 .gallery-slider::-webkit-scrollbar {
     display: none; /* Hide scrollbar for webkit browsers */
 }
+
+/* Gallery Card */
+.gallery-card {
+    min-width: 300px;
+    max-width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    scroll-snap-align: center;
+}
+
+/*workshop-image */
+.gallery-img {
+    width: 290px;
+    height: 310px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
 
 
 /* Your Experience With Us - Scrolling Reviews */
