@@ -113,8 +113,8 @@ html {
     align-items: flex-start;
     max-width: 90%;
     margin: auto;
-    padding: 50px 0;
-    gap: 15px;
+    padding: 15px 0;
+    gap: 5px;
 }
 
 /* Flip Cards - Align Left */
@@ -122,7 +122,7 @@ html {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 5px;
     justify-content: flex-start; /* Keeps cards aligned to the left */
 }
 
@@ -139,9 +139,9 @@ html {
     flex: 1;
     max-width: 35%;
     text-align: left;
-    padding: 20px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -162,8 +162,8 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 10px; /* Space between cards */
-    padding: 20px
+    gap: 5px; /* Space between cards */
+    padding: 10px
 }
 
 
@@ -185,7 +185,7 @@ html {
     height: 400px;
     perspective: 1200px;
     position: relative;
-    margin: 15px; /* Adds space between cards */
+    margin: 5px; /* Adds space between cards */
     display: flex;
     justify-content: center;
     align-items: center;
