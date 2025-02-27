@@ -132,25 +132,21 @@ section {
 }
 
 /* === 🃏 Polaroid Style Flip Cards === */
-
 /* Flip Card Container */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px; /* Space between cards */
+    gap: 30px; /* Space between polaroids */
     padding: 40px;
 }
 
-/* Flip Card - Realistic Polaroid Size */
+/* Polaroid Style Flip Card */
 .activity-card {
-    width: 300px; /* Wider for a realistic Polaroid look */
-    height: 400px; /* Taller for better spacing */
+    width: 280px; /* Matches Polaroid proportions */
+    height: 380px; /* Enough height for image + text */
     perspective: 1200px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Flip Animation */
@@ -158,7 +154,7 @@ section {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.6s ease-in-out;
     position: relative;
 }
 
@@ -180,44 +176,40 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     text-align: center;
 }
 
-/* 🎨 Polaroid Style Front */
+/* 🌸 Polaroid Gradient Frame */
 .card-front {
-    background: linear-gradient(to bottom, #fddde6, #e1bee7); /* Gradient Pink to Purple */
+    background: linear-gradient(to bottom, #f8d7e3, #e1bee7); /* Light Pink to Purple */
     padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* 📸 Image Inside Polaroid */
 .card-front img {
-    width: 90%; /* Fits within the Polaroid */
-    height: 250px; /* Fixed height for consistency */
+    width: 90%; /* Fits inside the polaroid */
+    height: 250px; /* Fixed height to maintain consistency */
     object-fit: cover; /* Ensures proper cropping */
     border-radius: 8px;
 }
 
-/* ✍️ Activity Name - Perfectly Positioned */
+/* ✍️ Activity Name - Below the Image */
 .card-front .activity-name {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
     color: #333;
-    margin-top: 15px; /* Proper spacing */
+    margin-top: 10px; /* Space between image and name */
     padding: 12px;
-    width: 90%;
+    width: 100%;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 6px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-/* 🏷️ Card Back - Description & Price */
+/* 🏷️ Card Back */
 .card-back {
     background: #f8f8f8;
     transform: rotateY(180deg);
@@ -228,7 +220,7 @@ section {
     align-items: center;
 }
 
-/* 📄 Description Text */
+/* 📄 Description */
 .card-back .description {
     font-size: 14px;
     color: #444;
@@ -242,6 +234,7 @@ section {
     font-weight: bold;
     color: #f39c12;
 }
+
 
 /* 📞 Contact Form */
 .contact-form {
