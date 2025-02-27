@@ -302,24 +302,27 @@ html {
     display: none; /* Hide scrollbar for webkit browsers */
 }
 
-/* Gallery Card */
-.gallery-card {
+/* Individual image container */
+.gallery-item {
     min-width: 300px;
     max-width: 320px;
+    height: 250px;
     background: white;
-    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     scroll-snap-align: center;
+    overflow: hidden; /* Ensures images fit properly */
 }
 
 /*workshop-image */
-.gallery-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+.gallery-item img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 12px; /* Matches the container */
 }
 
 
