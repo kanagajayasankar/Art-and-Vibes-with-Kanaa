@@ -4,6 +4,7 @@ body, html {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    background-color: #f5f5f5;
 }
 
 /* Navigation */
@@ -101,15 +102,11 @@ section {
     text-align: center;
 }
 
-/* Activities Section */
+/* Background of Flip Card Section (Blurred & Faded) */
 .activities-container {
     background: url('images/faded_background.jpg') no-repeat center center/cover;
+    opacity: 0.5; /* Faded effect */
     padding: 60px 20px;
-}
-
-.activities-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
 }
 
 /* Flip Card Container */
@@ -117,14 +114,14 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 50px; /* More space between cards */
     padding: 40px;
 }
 
 /* Polaroid Flip Card */
 .activity-card {
     width: 280px;
-    height: 380px;
+    height: 400px;
     perspective: 1200px;
     position: relative;
 }
@@ -138,7 +135,6 @@ section {
     position: relative;
 }
 
-/* Flip Effect */
 .activity-card.flipped .card-inner {
     transform: rotateY(180deg);
 }
@@ -178,13 +174,13 @@ section {
 .card-front .activity-name {
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
     color: #333;
     margin-top: 10px;
     padding: 12px;
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 6px;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 /* Back Side */
@@ -195,36 +191,14 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
-/* Description */
-.card-back .description {
-    font-size: 14px;
-    color: #444;
-    margin-bottom: 10px;
-    padding: 0 10px;
-}
-
-/* Price */
-.card-back .price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #f39c12;
-}
-
-/* Centered Contact Us Section */
+/* Contact Us Section (Centered) */
 .contact-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 60px 20px;
-}
-
-.contact-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
 }
 
 /* Contact Form */
@@ -237,59 +211,23 @@ section {
     max-width: 400px;
 }
 
-/* Input Fields */
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-/* Submit Button */
-.contact-form button {
-    width: 100%;
-    padding: 12px;
-    background: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-    background: #0056b3;
-}
-
-/* 'Your Experience with Us' Section */
+/* Your Experience With Us Section */
 .experience-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
     padding: 50px 20px;
     text-align: center;
 }
 
-.experience-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-/* Horizontal Scroll
-::contentReference[oaicite:0]{index=0}
- 
+/* Review Cards Scrolling */
 .review-slider {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 20px;
     padding: 20px;
-    scrollbar-width: none; /* Hide scrollbar */
+    scrollbar-width: none;
 }
 
-/* Review Card */
 .review-card {
     min-width: 300px;
     max-width: 320px;
@@ -301,7 +239,6 @@ section {
     scroll-snap-align: center;
 }
 
-/* Avatar */
 .review-card img {
     width: 80px;
     height: 80px;
@@ -309,86 +246,19 @@ section {
     margin-bottom: 10px;
 }
 
-/* Name */
 .review-card .name {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-/* Rating */
 .review-card .rating {
     color: #f39c12;
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-/* Review Text */
 .review-card .text {
     font-size: 14px;
     color: #444;
-}
-
-/* Smooth scrolling for reviews */
-.review-slider::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari */
-}
-
-.review-slider {
-    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .landing-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .landing-content p {
-        font-size: 1.2rem;
-    }
-
-    .btn {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-    }
-
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .activity-card {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .contact-form {
-        width: 100%;
-        max-width: 350px;
-    }
-}
-
-@media (max-width: 480px) {
-    .landing-content h1 {
-        font-size: 2rem;
-    }
-
-    .landing-content p {
-        font-size: 1rem;
-    }
-
-    .btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .experience-container h2 {
-        font-size: 2rem;
-    }
-
-    .review-card {
-        min-width: 260px;
-    }
 }
