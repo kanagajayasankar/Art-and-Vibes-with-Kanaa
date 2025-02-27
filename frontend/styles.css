@@ -191,7 +191,7 @@ section {
     padding: 8px;
     border-radius: 6px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
-    z-index: 5; /* Ensure it appears above the card */
+    z-index: 10; /* Ensure it appears above the card */
 }
 
 
