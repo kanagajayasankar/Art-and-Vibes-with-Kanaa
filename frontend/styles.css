@@ -125,7 +125,7 @@ section {
 .activity-card {
      position: relative;
     width: 350px;
-    height: 400px;
+    height: 370px;
     perspective: 1200px;
     position: relative;
     margin: 10px; /* Adds space between cards */
@@ -178,7 +178,7 @@ section {
 
 .card-front img {
     width: 95%;
-    height: 250px; /* Adjust based on image size */
+    height: 270px; /* Adjust based on image size */
     object-fit: cover;
     border-radius: 8px;
     loading: lazy; 
