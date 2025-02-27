@@ -282,12 +282,6 @@ html {
 }
 
 /* Gallery */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 5px;
-    padding: 20px;
-}
 
 .gallery-item {
     background: #fff;
@@ -303,8 +297,8 @@ html {
 
 /*workshop-image */
 .gallery-img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
