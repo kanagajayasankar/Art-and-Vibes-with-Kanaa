@@ -4,7 +4,12 @@ body, html {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+* {
+    box-sizing: border-box;
+}
+
 
 /* Navigation Bar */
 header {
