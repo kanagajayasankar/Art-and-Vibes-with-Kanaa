@@ -128,10 +128,10 @@ html {
 
 /* Activity Cards */
 .activity-card {
-    width: 310px; /* Wider cards */
-    height: 350px; /* Adjust if needed */
+    width: 320px; /* Wider cards */
+    height: 340px; /* Adjust if needed */
     flex: 1 1 calc(33.33% - 20px); /* Makes them fit in a row */
-    max-width: 320px; /* Ensures cards do not become too large */
+    max-width: 330px; /* Ensures cards do not become too large */
 }
 
 /* Description - Align Right */
