@@ -285,7 +285,7 @@ html {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 5px;
     padding: 20px;
 }
 
@@ -297,13 +297,37 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-     border-radius: 12px; 
+    border-radius: 12px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*workshop-image */
+.gallery-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 .gallery-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
     padding: 30px 10px;
 }
+
+/* Horizontal Scroll */
+.gallery-slider{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.gallery-slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers */
+}
+
 
 /* Your Experience With Us - Scrolling Reviews */
 .experience-container {
