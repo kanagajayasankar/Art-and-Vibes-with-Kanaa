@@ -114,7 +114,7 @@ html {
     max-width: 90%;
     margin: auto;
     padding: 50px 0;
-    gap: 40px;
+    gap: 15px;
 }
 
 /* Flip Cards - Align Left */
@@ -126,16 +126,9 @@ html {
     justify-content: flex-start; /* Keeps cards aligned to the left */
 }
 
-/* Card Container - Arrange Cards Side by Side */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px; /* Space between cards */
-}
-
 /* Activity Cards */
 .activity-card {
-    width: 300px; /* Wider cards */
+    width: 310px; /* Wider cards */
     height: 350px; /* Adjust if needed */
     flex: 1 1 calc(33.33% - 20px); /* Makes them fit in a row */
     max-width: 320px; /* Ensures cards do not become too large */
@@ -144,7 +137,7 @@ html {
 /* Description - Align Right */
 .workshop-description {
     flex: 1;
-    max-width: 40%;
+    max-width: 35%;
     text-align: left;
     padding: 20px;
     background: rgba(255, 255, 255, 0.8);
@@ -164,6 +157,14 @@ html {
     line-height: 1.6;
 }
 
+/* Card Container - Arrange Cards Side by Side */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px; /* Space between cards */
+    padding: 20px
+}
 
 
 .activities-container {
@@ -176,15 +177,6 @@ html {
 #contact h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-}
-
-/* Flip Cards Section */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px; /* Space between cards */
-    padding: 40px;
 }
 
 .activity-card {
@@ -240,15 +232,13 @@ html {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     padding-bottom: 20px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-front img {
     width: 100%;
-    height: 340px; /* Adjust based on image size */
+    height: 335px; /* Adjust based on image size */
     object-fit: cover;
     border-radius: 5px;
 }
@@ -277,8 +267,6 @@ html {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .card-back .description {
