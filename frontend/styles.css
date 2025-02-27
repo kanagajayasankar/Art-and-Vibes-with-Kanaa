@@ -125,7 +125,7 @@ section {
 .activity-card {
      position: relative;
     width: 350px;
-    height: 370px;
+    height: 350px;
     perspective: 1200px;
     position: relative;
     margin: 10px; /* Adds space between cards */
@@ -168,7 +168,7 @@ section {
 .card-front {
     position: relative;
     background: linear-gradient(to bottom, #f8d7e3, #e1bee7); /* Light Pink to Purple */
-    padding: 15px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
