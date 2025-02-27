@@ -4,14 +4,13 @@ body, html {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    background-color: #f5f5f5;
 }
 
-/* Navigation */
+/* Navigation Bar */
 header {
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     z-index: 1000;
 }
 
@@ -35,7 +34,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f39c12;
+    color: #f39c12; /* Hover color */
 }
 
 /* Landing Page */
@@ -65,7 +64,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
     z-index: 0;
 }
 
@@ -93,7 +92,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background: #e67e22;
+    background: #e67e22; /* Darker shade on hover */
 }
 
 /* Sections */
@@ -102,31 +101,33 @@ section {
     text-align: center;
 }
 
-/* Background of Flip Card Section (Blurred & Faded) */
 .activities-container {
     background: url('images/faded_background.jpg') no-repeat center center/cover;
-    opacity: 0.5; /* Faded effect */
-    padding: 60px 20px;
 }
 
-/* Flip Card Container */
+.activities-container h2,
+.gallery-container h2,
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Flip Cards Section */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px; /* More space between cards */
+    gap: 40px; /* Space between cards */
     padding: 40px;
 }
 
-/* Polaroid Flip Card */
 .activity-card {
     width: 280px;
-    height: 400px;
+    height: 380px;
     perspective: 1200px;
     position: relative;
 }
 
-/* Flip Animation */
 .card-inner {
     width: 100%;
     height: 100%;
@@ -139,7 +140,6 @@ section {
     transform: rotateY(180deg);
 }
 
-/* Front and Back Sides */
 .card-front, .card-back {
     width: 100%;
     height: 100%;
@@ -156,13 +156,11 @@ section {
     text-align: center;
 }
 
-/* Polaroid Gradient Frame */
 .card-front {
-    background: linear-gradient(to bottom, #f8d7e3, #e1bee7);
+    background: linear-gradient(to bottom, #f8d7e3, #e1bee7); /* Polaroid-style gradient */
     padding: 15px;
 }
 
-/* Image Inside Polaroid */
 .card-front img {
     width: 90%;
     height: 250px;
@@ -170,20 +168,18 @@ section {
     border-radius: 8px;
 }
 
-/* Activity Name Below Image */
 .card-front .activity-name {
     font-size: 18px;
     font-weight: bold;
-    text-align: center;
     color: #333;
     margin-top: 10px;
     padding: 12px;
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 6px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-/* Back Side */
 .card-back {
     background: #f8f8f8;
     transform: rotateY(180deg);
@@ -191,9 +187,42 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-/* Contact Us Section (Centered) */
+.card-back .description {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.card-back .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.gallery-item {
+    background: #fff;
+    border: 2px solid #ddd;
+    padding: 20px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form */
 .contact-container {
     display: flex;
     justify-content: center;
@@ -201,7 +230,6 @@ section {
     flex-direction: column;
 }
 
-/* Contact Form */
 .contact-form {
     background: white;
     padding: 20px;
@@ -211,23 +239,73 @@ section {
     max-width: 400px;
 }
 
-/* Your Experience With Us Section */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: #f39c12;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #e67e22;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20
+::contentReference[oaicite:0]{index=0}
+ 
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Your Experience With Us - Scrolling Reviews */
 .experience-container {
-    background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
     padding: 50px 20px;
     text-align: center;
 }
 
-/* Review Cards Scrolling */
+.experience-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Horizontal Scroll */
 .review-slider {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 20px;
     padding: 20px;
-    scrollbar-width: none;
+    scrollbar-width: none; /* Hide scrollbar */
 }
 
+.review-slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers */
+}
+
+/* Review Card */
 .review-card {
     min-width: 300px;
     max-width: 320px;
@@ -239,6 +317,7 @@ section {
     scroll-snap-align: center;
 }
 
+/* Avatar */
 .review-card img {
     width: 80px;
     height: 80px;
@@ -246,18 +325,21 @@ section {
     margin-bottom: 10px;
 }
 
+/* Name */
 .review-card .name {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
+/* Rating */
 .review-card .rating {
     color: #f39c12;
     font-size: 16px;
     margin-bottom: 10px;
 }
 
+/* Review Text */
 .review-card .text {
     font-size: 14px;
     color: #444;
