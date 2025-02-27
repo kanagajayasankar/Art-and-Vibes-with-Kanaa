@@ -231,6 +231,75 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* 🔥 Your Experience With Us - Scrolling Reviews Section */
+.experience-container {
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.experience-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Horizontal Scroll */
+.review-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.review-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Review Card */
+.review-card {
+    min-width: 300px;
+    max-width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    scroll-snap-align: center;
+}
+
+/* Avatar */
+.review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Name */
+.review-card .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Rating */
+.review-card .rating {
+    color: #f39c12;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Review Text */
+.review-card .text {
+    font-size: 14px;
+    color: #444;
+}
+
+
 /* Contact Form */
 .contact-container {
     display: flex;
