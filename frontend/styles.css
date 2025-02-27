@@ -321,25 +321,34 @@ section {
     text-align: center;
 }
 
-/* Contact Form */
 .contact-form {
-    background: white;
+    width: 90%;
+    max-width: 500px;
+    margin: auto; /* Centers the form */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 400px;
-    margin: auto; /* Centering the form */
+    background-color: #fff; /* Ensures form has a white background */
+    text-align: center; /* Centers the input elements */
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 10px;
+    width: calc(100% - 20px); /* Prevents full-width overflow */
+    padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn’t add extra width */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allows the user to expand the message box */
+    height: 120px;
 }
 
 .contact-form button {
