@@ -191,7 +191,22 @@ html {
     height: 340px; /* Adjust based on image size */
     object-fit: cover;
     border-radius: 5px;
-    loading: lazy; 
+}
+* 🖋 Activity Name on the Front */
+.card-front .activity-name {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid black;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
 }
 
 
