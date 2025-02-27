@@ -159,6 +159,7 @@ section {
 
 /* Polaroid Gradient Frame */
 .card-front {
+    position: relative;
     background: linear-gradient(to bottom, #f8d7e3, #e1bee7); /* Light Pink to Purple */
     padding: 15px;
     display: flex;
@@ -176,16 +177,20 @@ section {
 }
 /* Fix Activity Name Position */
 .card-front .activity-name {
+    position: absolute;  /* Position it on top of the Polaroid frame */
+    bottom: 10px; /* Moves it closer to the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the text */
+    width: 90%; /* Adjust width for better fit */
     font-size: 18px;
     font-weight: bold;
     text-align: center;
     color: #333;
-    margin-top: 10px;
-    padding: 12px;
-    width: 100%;
     background: rgba(255, 255, 255, 0.9);
+    padding: 8px;
     border-radius: 6px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 2; /* Ensures it stays on top */
 }
 
 .card-back {
