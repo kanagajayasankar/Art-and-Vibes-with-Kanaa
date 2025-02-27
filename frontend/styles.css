@@ -103,6 +103,8 @@ section {
 
 .activities-container {
     background: url('images/faded_background.jpg') no-repeat center center/cover;
+    opacity: 0.8; /* Adjust opacity for better visibility */
+    padding: 60px 20px;
 }
 
 .activities-container h2,
@@ -156,21 +158,28 @@ section {
     text-align: center;
 }
 
+/* Polaroid Gradient Frame */
 .card-front {
-    background: linear-gradient(to bottom, #f8d7e3, #e1bee7); /* Polaroid-style gradient */
+    background: linear-gradient(to bottom, #f8d7e3, #e1bee7); /* Light Pink to Purple */
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-front img {
     width: 90%;
-    height: 250px;
+    height: 250px; /* Adjust based on image size */
     object-fit: cover;
     border-radius: 8px;
 }
-
+/* Fix Activity Name Position */
 .card-front .activity-name {
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
     color: #333;
     margin-top: 10px;
     padding: 12px;
@@ -228,9 +237,12 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
+/* Ensure form is centered */
 .contact-form {
+    margin: auto;
     background: white;
     padding: 20px;
     border-radius: 12px;
