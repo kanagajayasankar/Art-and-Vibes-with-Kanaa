@@ -127,6 +127,11 @@ section {
     width: 280px;
     height: 400px;
     perspective: 1200px;
+    position: relative;
+    margin: 10px; /* Adds space between cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
    
 }
 
@@ -136,6 +141,7 @@ section {
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out;
     position: relative;
+    transform-origin: center;
 }
 
 .activity-card.flipped .card-inner {
@@ -175,6 +181,7 @@ section {
     height: 250px; /* Adjust based on image size */
     object-fit: cover;
     border-radius: 8px;
+    loading: lazy; 
 }
 /* Fix Activity Name Position */
    .card-front .activity-name {
