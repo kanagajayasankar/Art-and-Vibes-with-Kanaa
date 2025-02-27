@@ -106,10 +106,10 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 🎨 Workshop Section */
+/* Parent Container */
 .workshop-section {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     max-width: 90%;
     margin: auto;
@@ -117,24 +117,31 @@ html {
     gap: 40px;
 }
 
-/* Flip Cards Container */
+/* Flip Cards - Align Left */
 .flip-cards {
-    flex: 2;
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: flex-start; /* Aligns to the left */
+    justify-content: flex-start; /* Keeps cards aligned to the left */
 }
 
-/* Activity Cards (Side by Side) */
+/* Card Container - Arrange Cards Side by Side */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+/* Activity Cards */
 .activity-card {
-    width: 280px;
-    height: 350px;
-    flex: 1 1 calc(33.33% - 20px);
-    max-width: 300px;
+    width: 250px; /* Wider cards */
+    height: 350px; /* Adjust if needed */
+    flex: 1 1 calc(33.33% - 20px); /* Makes them fit in a row */
+    max-width: 280px; /* Ensures cards do not become too large */
 }
 
-/* Description Box (Right Side) */
+/* Description - Align Right */
 .workshop-description {
     flex: 1;
     max-width: 40%;
@@ -145,7 +152,6 @@ html {
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 🖋 Titles & Text */
 .workshop-description h2 {
     font-size: 2rem;
     color: #333;
@@ -158,25 +164,40 @@ html {
     line-height: 1.6;
 }
 
-/* 🌟 Flip Cards */
+
+
+.activities-container {
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
+    padding: 60px 20px;
+}
+
+.activities-container h2,
+.gallery-container h2,
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Flip Cards Section */
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Aligns to the left */
-    gap: 20px;
+    justify-content: center;
+    gap: 40px; /* Space between cards */
     padding: 40px;
 }
 
-/* 🎭 Flip Card Styles */
 .activity-card {
     position: relative;
-    width: 280px;
-    height: 380px;
+    width: 400px;
+    height: 400px;
     perspective: 1200px;
-    margin: 15px;
+    position: relative;
+    margin: 15px; /* Adds space between cards */
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .card-inner {
@@ -184,59 +205,101 @@ html {
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out;
+    position: relative;
+    transform-origin: center;
+    
 }
 
 .activity-card.flipped .card-inner {
     transform: rotateY(180deg);
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .card-front, .card-back {
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     backface-visibility: hidden;
     border-radius: 12px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    text-align: center;
 }
 
-/* Polaroid Effect */
+/* Polaroid Gradient Frame */
 .card-front {
-    background: linear-gradient(to bottom, #f8d7e3, #e1bee7);
+    position: relative;
+    background: linear-gradient(to bottom, #f8d7e3, #e1bee7); /* Light Pink to Purple */
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-front img {
     width: 100%;
-    height: 340px;
+    height: 340px; /* Adjust based on image size */
     object-fit: cover;
     border-radius: 5px;
 }
+* 🖋 Activity Name on the Front */
+.card-front .activity-name {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid black;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+}
 
-/* Back Side */
+
+
 .card-back {
     background: #f8f8f8;
     transform: rotateY(180deg);
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+.card-back .description {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+    padding: 0 10px;
 }
 
-/* 📷 Gallery */
-.gallery-container {
-    background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
-    padding: 60px 20px;
+.card-back .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f39c12;
 }
 
+/* 🎯 Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Gallery */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -244,26 +307,50 @@ footer {
     padding: 0 20px;
 }
 
-/* 🔥 Reviews Section */
+.gallery-item {
+    background: #fff;
+    border: 2px solid #ddd;
+    padding: 20px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.gallery-container {
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
+    padding: 60px 20px;
+}
+
+/* 🔥 Your Experience With Us - Scrolling Reviews Section */
 .experience-container {
-    background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
     padding: 50px 20px;
     text-align: center;
 }
 
+.experience-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Horizontal Scroll */
 .review-slider {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 20px;
     padding: 20px;
-    scrollbar-width: none;
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
 }
 
+/* Hide scrollbar for WebKit browsers */
 .review-slider::-webkit-scrollbar {
     display: none;
 }
 
+/* Review Card */
 .review-card {
     min-width: 300px;
     max-width: 320px;
@@ -275,36 +362,80 @@ footer {
     scroll-snap-align: center;
 }
 
-/* 📞 Contact Form */
+/* Avatar */
+.review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Name */
+.review-card .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Rating */
+.review-card .rating {
+    color: #f39c12;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Review Text */
+.review-card .text {
+    font-size: 14px;
+    color: #444;
+}
+
+
+/* Contact Form */
+
+/* Contact Section */
 .contact {
-    background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
+    width: 100%;
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3) !important; /* Light Purple to Pink */
     padding: 60px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+.contact-container {
+    width: 100%;
+    max-width: 800px; /* Adjust width if needed */
+    text-align: center;
+}
 
 .contact-form {
+    width: 90%;
     max-width: 500px;
-    margin: auto;
+    margin: auto; /* Centers the form */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    background-color: #fff; /* Ensures form has a white background */
+    text-align: center; /* Centers the input elements */
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    width: calc(100% - 20px); /* Prevents full-width overflow */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn’t add extra width */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-form textarea {
+    resize: vertical; /* Allows the user to expand the message box */
     height: 120px;
 }
 
@@ -320,7 +451,93 @@ footer {
     transition: background 0.3s ease, transform 0.2s;
 }
 
+/* Hover Effect */
 .contact-form button:hover {
     background: #e67e22;
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight pop effect */
+}
+
+
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20
+::contentReference[oaicite:0]{index=0}
+ 
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Your Experience With Us - Scrolling Reviews */
+.experience-container {
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.experience-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Horizontal Scroll */
+.review-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none; /* Hide scrollbar */
+}
+
+.review-slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers */
+}
+
+/* Review Card */
+.review-card {
+    min-width: 300px;
+    max-width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    scroll-snap-align: center;
+}
+
+/* Avatar */
+.review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Name */
+.review-card .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Rating */
+.review-card .rating {
+    color: #f39c12;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Review Text */
+.review-card .text {
+    font-size: 14px;
+    color: #444;
 }
