@@ -353,9 +353,9 @@ html {
 
 /* 🔹 Polaroid Frame for Gallery Items */
 .gallery-item {
-    min-width: 280px;
-    max-width: 300px;
-    height: auto;
+    min-width: 350px;
+    max-width: 400px;
+    height: 500;
     background: white; /* White background for Polaroid effect */
     border-radius: 10px; /* Slightly rounded corners */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
@@ -380,7 +380,7 @@ html {
 /* 🔹 Image Styling Inside Polaroid */
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 85%;
     object-fit: cover;
     border-radius: 5px;
     display: block;
