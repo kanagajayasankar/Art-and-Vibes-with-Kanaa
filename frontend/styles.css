@@ -130,7 +130,7 @@ nav ul li a:hover {
     align-items: flex-start;
     max-width: 90%;
     margin: auto;
-    padding: 50x 0px; /* Reduce padding */
+    padding: 35x 0px; /* Reduce padding */
     gap: 20px; /* Adjust spacing between cards and description */
 }
 
