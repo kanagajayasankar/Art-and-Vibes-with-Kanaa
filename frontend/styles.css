@@ -4,8 +4,10 @@ body, html {
     padding: 0;
     font-family: 'Montserrat', sans-serif; /* Clean and modern for body text */
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Adjust this based on your header height */
     overflow-y: auto;
 }
+
 * {
     box-sizing: border-box;
 }
