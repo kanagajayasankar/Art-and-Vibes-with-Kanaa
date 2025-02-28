@@ -35,13 +35,20 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 // Smooth Scroll for Navigation
 document.querySelectorAll("nav a").forEach(anchor => {
-    anchor.addEventListener("click", function (event) {
-        const href = this.getAttribute("href");
+    anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
 
         // Allow external navigation (e.g., About Me page)
         if (!href.startsWith("#")) {
             return; // Let the browser handle navigation
         }
+        
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop - 80, // Adjust to ensure section is fully visible
+                behavior: "smooth"
 
         event.preventDefault(); // Only prevent default for internal links
         document.querySelector(href).scrollIntoView({
