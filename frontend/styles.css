@@ -171,9 +171,14 @@ html {
     height: 340px; /* Adjust if needed */
     flex: 1 1 calc(33.33% - 20px); /* Makes them fit in a row */
     max-width: 320px; /* Ensures cards do not become too large */
+    align-items: center;
     position: relative; /* Ensure proper positioning */
     perspective: 1200px; /* Needed for 3D flip effect */
+    display: flex; /* Ensure it is visible */
+    justify-content: center;
+    margin: 8px;
 }
+
 
 /* Description - Align Right */
 .workshop-description {
@@ -227,18 +232,6 @@ html {
     margin-bottom: 1.5rem;
 }
 
-.activity-card {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    perspective: 1200px;
-    position: relative;
-    margin: 8px; /* Adds space between cards */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-}
 
 .card-inner {
     width: 100%;
