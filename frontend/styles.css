@@ -515,67 +515,40 @@ html {
 }
 
 
-/* 🔹 Contact Section Styling */
-.contact-section {
-    display: flex;
-    justify-content: center; /* Aligns content to the center */
-    align-items: flex-start; /* Aligns items at the top */
-    gap: 50px; /* Space between form and contact details */
-    padding: 40px 10%; /* Reduces height & adds spacing */
-    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Gradient background */
-    min-height: 60vh; /* Reduces height */
-    flex-wrap: wrap; /* Ensures responsiveness */
+/* Contact Section */
+.contact {
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
+    padding: 40px 20px;
+    text-align: center;
 }
 
-/* 🔹 Enquiry Form */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: auto;
+    gap: 50px;
+}
+
+/* Enquiry Form */
 .enquiry-form {
     flex: 1;
-    max-width: 450px; /* Prevents form from being too wide */
     text-align: center;
 }
 
 .enquiry-form h2 {
-    margin-bottom: 15px;
     font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-/* 🔹 Contact Information */
-.contact-info {
-    flex: 1;
-    max-width: 450px;
-    text-align: left;
-}
-
-.contact-info h2 {
-    margin-bottom: 15px;
-    font-size: 2rem;
-}
-
-.contact-info p {
-    margin: 10px 0;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-/* 🔹 Instagram Logo */
-.instagram-logo {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-    transition: transform 0.2s ease-in-out;
-}
-
-.instagram-logo:hover {
-    transform: scale(1.1);
-}
-
-/* 🔹 Contact Form */
 .contact-form {
-    width: 100%;
+    background: white;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: #fff; /* White background */
+    text-align: center;
+    width: 100%;
 }
 
 .contact-form input,
@@ -590,7 +563,7 @@ html {
 
 .contact-form textarea {
     resize: vertical;
-    height: 120px;
+    height: 100px;
 }
 
 .contact-form button {
@@ -600,17 +573,34 @@ html {
     border: none;
     border-radius: 8px;
     font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s;
-    width: 100%;
+    transition: background 0.3s ease;
 }
 
 .contact-form button:hover {
     background: #e67e22;
-    transform: scale(1.05);
 }
 
+/* Contact Info */
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.instagram-link img {
+    width: 40px;
+    height: 40px;
+}
 
 /* Footer */
 footer {
