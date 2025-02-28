@@ -411,7 +411,7 @@ html {
 /* Your Experience With Us - Scrolling Reviews */
 .experience-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
-    padding: 50px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
@@ -431,6 +431,7 @@ html {
     padding: 20px;
     scrollbar-width: none; /* Hide scrollbar */
     -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    margin-top: 0;
 }
 
 .review-slider::-webkit-scrollbar {
@@ -518,8 +519,9 @@ html {
 /* Contact Section */
 .contact {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: center;
+    margin-top: 0;
 }
 
 .contact-content {
@@ -528,7 +530,7 @@ html {
     align-items: flex-start;
     max-width: 900px;
     margin: auto;
-    gap: 50px;
+    gap: 80px;
 }
 
 /* Enquiry Form */
@@ -539,6 +541,7 @@ html {
 
 .enquiry-form h2 {
     font-size: 2rem;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
