@@ -9,7 +9,8 @@ app.use(cors());
 app.use(express.json());
 
 // Correct the path to serve frontend files
-app.use(express.static(path.join(__dirname, "../frontend")));
+app.use(express.static("/opt/render/project/src/frontend"));
+
 
 // API endpoint for activities (if needed)
 app.get("/activities", (req, res) => {
@@ -40,12 +41,13 @@ app.get("/activities", (req, res) => {
 
 // Serve about.html correctly
 app.get("/about", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/about.html"));
+    res.sendFile("/opt/render/project/src/frontend/index.html");
 });
 
 // Serve index.html for all other routes
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/index.html"));
+    res.sendFile("/opt/render/project/src/frontend/about.html");
+
 });
 
 // Start the server
