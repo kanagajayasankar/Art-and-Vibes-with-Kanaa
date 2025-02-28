@@ -1,11 +1,13 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 10000; // Ensure single port declaration
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static("frontend")); // Serve static files (HTML, CSS, JS)
 
 // Sample activities data
 const activities = [
@@ -42,25 +44,12 @@ app.get("/", (req, res) => {
     res.send("Backend is running successfully!");
 });
 
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
-
-const express = require("express");
-const app = express();
-const path = require("path");
-
-app.use(express.static("public")); // Ensure static files are served
-
 // Route to serve the About page
 app.get("/about", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "about.html"));
 });
 
-// Start server
-const PORT = process.env.PORT || 3000;
+// Start the server
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
-
