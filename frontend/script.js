@@ -43,7 +43,7 @@ document.querySelectorAll("nav a").forEach(anchor => {
         // Allow external navigation (e.g., About Me page)
         if (!href.startsWith("#")) {
             return; // Let the browser handle navigation
-        }
+        
         
         if (targetSection) {
             window.scrollTo({
@@ -53,6 +53,8 @@ document.querySelectorAll("nav a").forEach(anchor => {
         event.preventDefault(); // Only prevent default for internal links
         document.querySelector(href).scrollIntoView({
             behavior: "smooth"
-        });
+            });
+        }    
     });
+
 });
