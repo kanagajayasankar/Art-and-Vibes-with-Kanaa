@@ -352,27 +352,32 @@ html {
 }
 
 /* 🔹 Individual Image Container */
-.gallery-item {
-    min-width: 300px;
-    max-width: 320px;
-    height: 250px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.gallery-card {
+    background: white; /* Polaroid white frame */
+    padding: 10px; /* Space around the image */
+    border-radius: 8px; /* Soft corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center; /* Center text inside the frame */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    scroll-snap-align: start; /* Ensures smoother snapping */
-    overflow: hidden;
-    flex-shrink: 0; /* Prevents images from shrinking */
+    justify-content: flex-start;
+    max-width: 220px; /* Adjust size */
 }
 
-/* 🔹 Image Styling */
-.gallery-item img {
+.gallery-card img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
+    height: auto;
+    border-radius: 4px; /* Slightly rounded edges */
+
+}
+
+.gallery-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    font-family: "Courier New", Courier, monospace; /* Classic Polaroid font */
 }
 
 /* 🔹 Scroll Arrows */
