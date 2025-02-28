@@ -57,3 +57,33 @@ document.querySelectorAll("nav a").forEach(anchor => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const gallery = document.querySelector('.gallery');
+    const leftArrow = document.getElementById('leftArrow');
+    const rightArrow = document.getElementById('rightArrow');
+
+    if (!gallery || !leftArrow || !rightArrow) return; // Ensure elements exist
+
+    // Scroll Amount (adjust if needed)
+    const scrollAmount = 300;
+
+    // Function to Scroll
+    function scrollGallery(direction) {
+        gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+
+    // Show/Hide Arrows
+    function updateArrows() {
+        leftArrow.style.display = gallery.scrollLeft > 0 ? 'block' : 'none';
+        rightArrow.style.display = gallery.scrollLeft + gallery.clientWidth < gallery.scrollWidth ? 'block' : 'none';
+    }
+
+    // Event Listeners
+    leftArrow.addEventListener('click', () => scrollGallery(-1));
+    rightArrow.addEventListener('click', () => scrollGallery(1));
+    gallery.addEventListener('scroll', updateArrows);
+
+    // Initial Arrow Update
+    updateArrows();
+});
