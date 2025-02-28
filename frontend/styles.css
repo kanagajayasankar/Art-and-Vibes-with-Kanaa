@@ -161,7 +161,7 @@ nav ul li a:hover {
 /* Description - Align Right */
 .workshop-description {
     flex: 1;
-    max-width: 50%;
+    max-width: 40%;
     text-align: left;
     padding: 40px;
     min-height: auto; /* Ensures full viewport height */
