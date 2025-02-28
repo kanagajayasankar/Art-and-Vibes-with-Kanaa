@@ -428,7 +428,7 @@ html {
     font-size: 2.8rem; /* Adjust size */
     font-weight: 700; /* Make it stand out */
     margin-bottom: 10px;
-    margin-top: 7px;
+    margin-top: 15px;
     padding-top: 5px;
 }
 
@@ -441,7 +441,7 @@ html {
     padding: 20px;
     scrollbar-width: none; /* Hide scrollbar */
     -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-    margin-top: 0;
+    margin-top: -10;
     padding-top: 0
 }
 
@@ -536,7 +536,7 @@ html {
     display: flex;
     align-items: center; /* Centers content vertically */
     justify-content: space-between; /* Adds spacing between Enquiry Form & Contact Me */
-    gap: 40px; 
+    gap: 120px; 
 }
 
 
@@ -556,7 +556,7 @@ html {
 }
 
 .enquiry-form h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-top: 0;
     margin-bottom: 8px;
     margin-top: 10px; 
@@ -568,7 +568,7 @@ html {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
-    max-width: 450px; /* Increase width */
+    max-width: 380px; /* Increase width */
     height: auto;
     padding: 10px 40px;
 }
@@ -610,10 +610,11 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centers vertically */
+    align-items: center; /* ✅ Centers horizontally */
 }
 
 .contact-info h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 4px;
     margin-top: 0;
     margin-top: 8px; 
