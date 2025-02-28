@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             <div class="card-inner">
                 <div class="card-front">
                     <img src="${activity.image}" alt="${activity.name}" class="activity-image">
+                    <p class="activity-name">${activity.name}</p> <!--inside card front -->
                 </div>
                 <div class="card-back">
                     <h3>${activity.name}</h3>
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                     <button class="book-now">Book Now</button>
                 </div>
             </div>
-            <p class="polaroid-title">${activity.name}</p>
+            
         `;
 
         // Flip effect
