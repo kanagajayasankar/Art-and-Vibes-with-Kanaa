@@ -531,7 +531,7 @@ html {
     display: flex;
     align-items: center; /* Centers content vertically */
     justify-content: space-between; /* Adds spacing between Enquiry Form & Contact Me */
-    gap: 40px; 
+    gap: 100px; 
 }
 
 
