@@ -437,6 +437,7 @@ html {
     scrollbar-width: none; /* Hide scrollbar */
     -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
     margin-top: 0;
+    padding-top: 0
 }
 
 .review-slider::-webkit-scrollbar {
