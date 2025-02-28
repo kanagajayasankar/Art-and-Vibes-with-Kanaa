@@ -35,26 +35,24 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 // Smooth Scroll for Navigation
 document.querySelectorAll("nav a").forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute("href").substring(1);
-        const targetSection = document.getElementById(targetId);
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent default behavior
 
-        // Allow external navigation (e.g., About Me page)
+        const href = this.getAttribute("href"); // Get href value
+
+        // If it's an external link (not an anchor link), let the browser handle it
         if (!href.startsWith("#")) {
-            return; // Let the browser handle navigation
-        
-        
+            window.location.href = href;
+            return;
+        }
+
+        const targetSection = document.getElementById(href.substring(1)); // Remove '#' to get ID
+
         if (targetSection) {
             window.scrollTo({
-                top: targetSection.offsetTop - 80, // Adjust to ensure section is fully visible
+                top: targetSection.offsetTop - 80, // Adjust offset for fixed header
                 behavior: "smooth"
-
-        event.preventDefault(); // Only prevent default for internal links
-        document.querySelector(href).scrollIntoView({
-            behavior: "smooth"
             });
-        }    
+        }
     });
-
 });
