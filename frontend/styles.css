@@ -480,153 +480,6 @@ html {
     color: #444;
 }
 
-/* Contact Section */
-.contact {
-    min-height: 100vh; /* Makes each section at least the full height of the screen */
-    width: 100%;
-    background: linear-gradient(to bottom, #e1bee7, #f8d7e3) !important; /* Light Purple to Pink */
-    padding:20px;
-    gap: 20px
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    margin-top: 0;
-}
-.contact-container {
-    width: 100%;
-    max-width: 800px; /* Adjust width if needed */
-    text-align: center;
-}
-
-.contact-form {
-    width: 90%;
-    max-width: 500px;
-    margin: auto; /* Centers the form */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: #fff; /* Ensures form has a white background */
-    text-align: center; /* Centers the input elements */
-    scroll-behavior: smooth;
-    flex: 1; /* Ensures both sections take equal width */
-    min-width: 300px; /* Prevents the sections from becoming too narrow */
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: calc(100% - 20px); /* Prevents full-width overflow */
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    box-sizing: border-box; /* Ensures padding doesn’t add extra width */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact-form textarea {
-    resize: vertical; /* Allows the user to expand the message box */
-    height: 120px;
-}
-
-.contact-form button {
-    font-family: 'Montserrat', sans-serif;
-    background: #f39c12;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s;
-}
-
-.contact-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 900px;
-    margin: auto;
-}
-
-* Bigger Contact Form (Left Side) */
-.contact-form {
-    width: 55%; /* Increase size */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
-/* Center the Enquiry Form Heading */
-.enquiry-heading {
-    text-align: center;
-    font-size: 2.5rem;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 30px;
-}
-}
-.contact-info {
-    width: 45%; /* Contact details on the right */
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    flex: 1; /* Ensures both sections take equal width */
-    min-width: 300px; /* Prevents the sections from becoming too narrow */
-}
-
-/* Contact Me Heading */
-.contact-info h3 {
-    font-size: 2rem;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.contact-info p {
-    font-size: 1.1rem;
-    margin: 10px 0;
-    color: #333;
-}
-
-.contact-info a {
-    color: #f39c12;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-info a:hover {
-    color: #e67e22;
-}
-
-/* Hover Effect */
-.contact-form button:hover {
-    background: #e67e22;
-    transform: scale(1.05); /* Slight pop effect */
-}
-
-/* Instagram Logo Styling */
-.instagram-link {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-top: 10px;
-}
-
-.insta-logo {
-    width: 25px;  /* Adjust size */
-    height: 25px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.insta-logo:hover {
-    transform: scale(1.2);  /* Slight zoom effect */
-}
 
 
 
@@ -662,6 +515,101 @@ html {
 }
 
 
+/* 🔹 Contact Section Styling */
+.contact-section {
+    display: flex;
+    justify-content: center; /* Aligns content to the center */
+    align-items: flex-start; /* Aligns items at the top */
+    gap: 50px; /* Space between form and contact details */
+    padding: 40px 10%; /* Reduces height & adds spacing */
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Gradient background */
+    min-height: 60vh; /* Reduces height */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* 🔹 Enquiry Form */
+.enquiry-form {
+    flex: 1;
+    max-width: 450px; /* Prevents form from being too wide */
+    text-align: center;
+}
+
+.enquiry-form h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+/* 🔹 Contact Information */
+.contact-info {
+    flex: 1;
+    max-width: 450px;
+    text-align: left;
+}
+
+.contact-info h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* 🔹 Instagram Logo */
+.instagram-logo {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    transition: transform 0.2s ease-in-out;
+}
+
+.instagram-logo:hover {
+    transform: scale(1.1);
+}
+
+/* 🔹 Contact Form */
+.contact-form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff; /* White background */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.contact-form button {
+    background: #f39c12;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background: #e67e22;
+    transform: scale(1.05);
+}
 
 
 /* Footer */
