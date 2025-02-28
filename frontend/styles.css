@@ -353,20 +353,20 @@ html {
 
 /* 🔹 Polaroid Frame for Gallery Items */
 .gallery-item {
-    min-width: 350px;
-    max-width: 400px;
-    height: 500;
+    width: 290px;
+    height: 330px;
+    padding: 10px;
     background: white; /* White background for Polaroid effect */
     border-radius: 10px; /* Slightly rounded corners */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: flex-start;
     scroll-snap-align: start; /* Ensures smooth scrolling */
     overflow: hidden;
     padding-bottom: 50px; /* Space for caption */
-    flex-shrink: 0;
     position: relative;
     transform: rotate(-2deg); /* Slight tilt for authentic Polaroid effect */
     transition: transform 0.3s ease-in-out;
@@ -380,11 +380,10 @@ html {
 /* 🔹 Image Styling Inside Polaroid */
 .gallery-item img {
     width: 100%;
-    height: 85%;
+    height: 255px%;
     object-fit: cover;
     border-radius: 5px;
-    display: block;
-
+    
 }
 
 /* 🔹 Caption Text (Mimicking Polaroid Description) */
