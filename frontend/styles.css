@@ -2,7 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Clean and modern for body text */
     scroll-behavior: smooth;
     overflow-y: auto;
 }
@@ -37,6 +37,7 @@ nav ul li a {
     font-size: 18px;
     padding: 10px 15px;
     display: inline-block;
+    font-family: 'Montserrat', sans-serif
 }
 
 nav ul li a:hover {
@@ -79,11 +80,13 @@ nav ul li a:hover {
 }
 
 .landing-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
+    font-size: 2.8rem; /* Adjust size */
+    font-weight: 700; /* Make it stand out */
 }
 
 .landing-content p {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -125,13 +128,15 @@ html {
 }
 
 .about-container h1 {
-    font-size: 3rem;
+    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
+    font-size: 2.8rem; /* Adjust size */
+    font-weight: 700; /* Make it stand out */
     color: #333;
     margin-bottom: 20px;
 }
 
 .about-container p {
-    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
     color: #555;
     max-width: 800px;
     line-height: 1.6;
@@ -175,13 +180,15 @@ html {
     }
 
 .workshop-description h2 {
-    font-size: 2rem;
+    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
+    font-size: 2.8rem; /* Adjust size */
+    font-weight: 700; /* Make it stand out */
     color: #333;
     margin-bottom: 10px;
 }
 
 .workshop-description p {
-    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
     color: #555;
     line-height: 1.6;
 }
@@ -204,7 +211,9 @@ html {
 .activities-container h2,
 .gallery-container h2,
 #contact h2 {
-    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
+    font-size: 2.8rem; /* Adjust size */
+    font-weight: 700; /* Make it stand out */
     margin-bottom: 1.5rem;
 }
 
@@ -278,7 +287,7 @@ html {
     height: 10%; /* Adjust height to fit text */
     font-size: 16px;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
     color: white;
     display: flex;
     align-items: center;
@@ -301,6 +310,7 @@ html {
 }
 
 .card-back .description {
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     color: #444;
     margin-bottom: 10px;
@@ -308,6 +318,7 @@ html {
 }
 
 .card-back .price {
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: #f39c12;
@@ -408,7 +419,9 @@ html {
 }
 
 .experience-container h2 {
-    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
+    font-size: 2.8rem; /* Adjust size */
+    font-weight: 700; /* Make it stand out */
     margin-bottom: 20px;
 }
 
@@ -449,6 +462,7 @@ html {
 
 /* Name */
 .review-card .name {
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -463,6 +477,7 @@ html {
 
 /* Review Text */
 .review-card .text {
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     color: #444;
 }
@@ -501,6 +516,7 @@ html {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     box-sizing: border-box; /* Ensures padding doesn’t add extra width */
     display: block;
@@ -514,6 +530,7 @@ html {
 }
 
 .contact-form button {
+    font-family: 'Montserrat', sans-serif;
     background: #f39c12;
     color: white;
     padding: 12px;
@@ -534,6 +551,7 @@ html {
 
 /* Footer */
 footer {
+    font-family: 'Montserrat', sans-serif;
     background: #333;
     color: #fff;
     text-align: center;
@@ -542,6 +560,7 @@ footer {
  
 /* Footer */
 footer {
+    font-family: 'Montserrat', sans-serif;
     background: #333;
     color: #fff;
     text-align: center;
