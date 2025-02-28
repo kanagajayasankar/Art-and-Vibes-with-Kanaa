@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", async function () {
                     <button class="book-now">Book Now</button>
                 </div>
             </div>
-            
         `;
 
         // Flip effect
@@ -49,7 +48,6 @@ document.querySelectorAll("nav a").forEach(anchor => {
         const targetSection = document.getElementById(href.substring(1)); // Remove '#' to get ID
 
         if (targetSection) {
-                        
             window.scrollTo({
                 top: targetSection.offsetTop - 80, // Adjust offset for fixed header
                 behavior: "smooth"
@@ -57,6 +55,10 @@ document.querySelectorAll("nav a").forEach(anchor => {
         }
     });
 });
+
+/* --------------------------------------- */
+/* ✅ ADD THE GALLERY SCROLLING CODE HERE  */
+/* --------------------------------------- */
 
 document.addEventListener("DOMContentLoaded", function () {
     const gallery = document.querySelector('.gallery');
