@@ -49,6 +49,8 @@ document.querySelectorAll("nav a").forEach(anchor => {
         const targetSection = document.getElementById(href.substring(1)); // Remove '#' to get ID
 
         if (targetSection) {
+            const offset = 100;
+            
             window.scrollTo({
                 top: targetSection.offsetTop - 80, // Adjust offset for fixed header
                 behavior: "smooth"
