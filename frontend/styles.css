@@ -205,7 +205,13 @@ html {
 
 .activities-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
-    padding: 60px 20px;
+    min-height: 100vh; /* Makes each section at least the full height of the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    padding: 80px 20px; /* Adjust padding for spacing */
+    margin-bottom: 0; /* Ensures no overlap with the next section */
 }
 
 .activities-container h2,
@@ -332,9 +338,16 @@ html {
 /* 🔹 Gallery Section */
 .gallery-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
-    padding: 50px 20px;
     text-align: center;
     position: relative; /* Needed for positioning arrows */
+    min-height: 100vh; /* Makes each section at least the full height of the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    padding: 80px 20px; /* Adjust padding for spacing */
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* 🔹 Horizontal Scroll */
@@ -484,13 +497,15 @@ html {
 
 /* Contact Section */
 .contact {
+    min-height: 100vh; /* Makes each section at least the full height of the screen */
     width: 100%;
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3) !important; /* Light Purple to Pink */
-    padding: 60px 20px;
+    padding: 80px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 0;
 }
 .contact-container {
     width: 100%;
