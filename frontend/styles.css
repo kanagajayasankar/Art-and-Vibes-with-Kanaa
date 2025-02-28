@@ -111,6 +111,32 @@ html {
     scroll-behavior: smooth;
 }
 
+/* 🔹 About Page Background */
+.about-container {
+    background: linear-gradient(to right, #e1bee7, #f8d7e3); /* Light Purple to Pink */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.about-container h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+
 /* Parent Container */
 .workshop-section {
     display: flex;
