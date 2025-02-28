@@ -543,6 +543,51 @@ html {
     transition: background 0.3s ease, transform 0.2s;
 }
 
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+.contact-form {
+    width: 45%; /* Make the form take half the space */
+}
+
+.contact-info {
+    width: 45%; /* Contact details on the right */
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+.contact-info a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #e67e22;
+}
+
+
 /* Hover Effect */
 .contact-form button:hover {
     background: #e67e22;
