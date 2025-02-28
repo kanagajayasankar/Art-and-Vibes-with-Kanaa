@@ -127,11 +127,6 @@ nav ul li a:hover {
     align-items: flex-start;
     max-width: 90%;
     margin: auto;
-    max-height: 100vh; /* Ensures full viewport height */
-    margin-top: 0;
-    margin-bottom: 0;
-    scroll-behavior: smooth;
-    max-height: auto; /* Let content determine height */
     padding: 20px 10px; /* Reduce padding */
     gap: 20px; /* Adjust spacing between cards and description */
 }
@@ -163,13 +158,12 @@ nav ul li a:hover {
 /* Description - Align Right */
 .workshop-description {
     flex: 1;
-    max-width: 45%;
+    max-width: 50%;
     text-align: left;
-    padding: 5px;
-    min-height: 100vh; /* Ensures full viewport height */
-    margin-top: 0;
-    margin-bottom: 0;
-    }
+    padding: 20px;
+    min-height: auto; /* Ensures full viewport height */
+    
+ }
 
 .workshop-description h2 {
     font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
@@ -200,13 +194,13 @@ nav ul li a:hover {
 
 .activities-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
-    min-height: 100vh; /* Makes each section at least the full height of the screen */
+    min-height: auto; /* Makes each section at least the full height of the screen */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
     margin-bottom: 0; /* Ensures no overlap with the next section */
-    min-height: auto; /* Instead of 100vh, let it adapt to content */
+    height: auto; /* Instead of 100vh, let it adapt to content */
     padding: 50px 20px;/* Reduce padding for a tighter fit */
 }
 
