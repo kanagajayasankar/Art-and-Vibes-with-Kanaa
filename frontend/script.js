@@ -35,8 +35,15 @@ document.addEventListener("DOMContentLoaded", async function () {
 // Smooth Scroll for Navigation
 document.querySelectorAll("nav a").forEach(anchor => {
     anchor.addEventListener("click", function (event) {
-        event.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
+        const href = this.getAttribute("href");
+
+        // Allow external navigation (e.g., About Me page)
+        if (!href.startsWith("#")) {
+            return; // Let the browser handle navigation
+        }
+
+        event.preventDefault(); // Only prevent default for internal links
+        document.querySelector(href).scrollIntoView({
             behavior: "smooth"
         });
     });
