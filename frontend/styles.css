@@ -413,7 +413,7 @@ html {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
     text-align: center;
     padding-top: 0px; /* Further reduce space above */
-    margin-top: -10px; /* Pull the section up slightly */
+    margin-top: 10px; /* Pull the section up slightly */
     
 }
 
@@ -421,7 +421,7 @@ html {
     font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
     font-size: 2.8rem; /* Adjust size */
     font-weight: 700; /* Make it stand out */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Horizontal Scroll */
