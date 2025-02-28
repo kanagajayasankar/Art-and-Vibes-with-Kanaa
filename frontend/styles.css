@@ -412,7 +412,7 @@ html {
 .experience-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
     text-align: center;
-    padding-top: 10px; /* Further reduce space above */
+    padding-top: 15px; /* Further reduce space above */
     margin-top: 10px; /* Pull the section up slightly */
     
 }
@@ -484,8 +484,6 @@ html {
 }
 
 
-
-
 /* 🔹 About Page Background */
 .about-container {
     background: linear-gradient(to right, #e1bee7, #f8d7e3); /* Light Purple to Pink */
@@ -545,7 +543,7 @@ html {
 .enquiry-form h2 {
     font-size: 2rem;
     margin-top: 0;
-    margin-bottom: 7px;
+    margin-bottom: 4px;
     margin-top: 10px; 
 }
 
@@ -598,7 +596,7 @@ html {
 
 .contact-info h2 {
     font-size: 2rem;
-    margin-bottom: 7px;
+    margin-bottom: 4px;
     margin-top: 0;
     margin-top: 10px; 
 }
