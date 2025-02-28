@@ -66,8 +66,7 @@ nav ul li a:hover {
     object-fit: cover;
     z-index: 1;
     margin-bottom: 0; /* Remove unwanted spacing */
-    padding-bottom: 0; /* Remove padding */
-}
+ }
 
 .overlay {
     position: absolute;
@@ -144,6 +143,11 @@ html {
     color: #555;
     max-width: 800px;
     line-height: 1.6;
+}
+
+/* 🎯 Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
 
