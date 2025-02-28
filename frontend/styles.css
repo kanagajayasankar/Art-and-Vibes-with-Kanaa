@@ -368,8 +368,8 @@ html {
     overflow: hidden;
     padding-bottom: 50px; /* Space for caption */
     position: relative;
-    transform: rotate(-2deg); /* Slight tilt for authentic Polaroid effect */
     transition: transform 0.3s ease-in-out;
+    transition: transform rotate(-2deg); /* Slight tilt for authentic Polaroid effect */
 }
 
 /* 🔹 Slight Rotation Effect on Hover */
