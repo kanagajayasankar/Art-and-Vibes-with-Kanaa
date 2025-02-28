@@ -328,7 +328,6 @@ html {
     padding: 80px 20px; /* Adjust padding for spacing */
     margin-top: 0;
     margin-bottom: 0;
-    scroll-behavior: smooth;
 }
 
 /* 🔹 Horizontal Scroll */
@@ -340,7 +339,7 @@ html {
     padding: 20px;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    scroll-behavior: smooth; /* Smooth scrolling effect */
+    
 }
 
 /* Hide scrollbar for WebKit browsers */
