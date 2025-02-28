@@ -411,9 +411,9 @@ html {
 /* Your Experience With Us - Scrolling Reviews */
 .experience-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
-    padding: 5px;
     text-align: center;
-    margin-top: 0;
+    padding-top: 0px; /* Further reduce space above */
+    margin-top: -10px; /* Pull the section up slightly */
     
 }
 
@@ -545,7 +545,8 @@ html {
 .enquiry-form h2 {
     font-size: 2rem;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+    margin-top: 10px; 
 }
 
 .contact-form {
@@ -597,8 +598,9 @@ html {
 
 .contact-info h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     margin-top: 0;
+    margin-top: 10px; 
 }
 
 .contact-info p {
