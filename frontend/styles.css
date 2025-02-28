@@ -127,12 +127,13 @@ nav ul li a:hover {
     align-items: flex-start;
     max-width: 90%;
     margin: auto;
-    padding: 5px;
-    gap: 5px;
     max-height: 100vh; /* Ensures full viewport height */
     margin-top: 0;
     margin-bottom: 0;
     scroll-behavior: smooth;
+    max-height: auto; /* Let content determine height */
+    padding: 20px 10px; /* Reduce padding */
+    gap: 20px; /* Adjust spacing between cards and description */
 }
 
 /* Flip Cards - Align Left */
@@ -146,16 +147,16 @@ nav ul li a:hover {
 
 /* Activity Cards */
 .activity-card {
-    width: 260px; /* Wider cards */
-    height: 300x; /* Adjust if needed */
+    width: 240px; /* Wider cards */
+    height: 280x; /* Adjust if needed */
     flex: 1 1 calc(33.33% - 20px); /* Makes them fit in a row */
-    max-width: 310px; /* Ensures cards do not become too large */
+    max-width: 280px; /* Ensures cards do not become too large */
     align-items: center;
     position: relative; /* Ensure proper positioning */
     perspective: 1200px; /* Needed for 3D flip effect */
     display: flex; /* Ensure it is visible */
     justify-content: center;
-    margin: 8px;
+    margin: 5px;
 }
 
 
@@ -176,6 +177,9 @@ nav ul li a:hover {
     font-weight: 700; /* Make it stand out */
     color: #333;
     margin-bottom: 10px;
+    min-height: auto; /* Remove fixed height */
+    max-width: 50%; /* Adjust width to balance with cards */
+    padding: 20px; /* Reduce padding */
 }
 
 .workshop-description p {
@@ -201,8 +205,9 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
-    padding: 80px 20px; /* Adjust padding for spacing */
     margin-bottom: 0; /* Ensures no overlap with the next section */
+    min-height: auto; /* Instead of 100vh, let it adapt to content */
+    padding: 50px 20px;/* Reduce padding for a tighter fit */
 }
 
 .activities-container h2,
