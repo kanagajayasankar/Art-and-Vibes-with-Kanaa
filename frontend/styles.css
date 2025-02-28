@@ -128,7 +128,7 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px;
+    padding: 20px;
 }
 
 .about-container h1 {
@@ -157,7 +157,8 @@ html {
     padding: 5px;
     gap: 5px;
     min-height: 100vh; /* Ensures full viewport height */
-    padding-top: 50px; /* Creates space above */
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Flip Cards - Align Left */
@@ -191,7 +192,8 @@ html {
     text-align: left;
     padding: 5px;
     min-height: 100vh; /* Ensures full viewport height */
-    padding-top: 50px; /* Creates space above */
+    margin-top: 0;
+    margin-bottom: 0;
     }
 
 .workshop-description h2 {
