@@ -5,7 +5,8 @@ body, html {
     font-family: 'Montserrat', sans-serif; /* Clean and modern for body text */
     scroll-behavior: smooth;
     scroll-padding-top: 100px; /* Adjust this based on your header height */
-    overflow-y: hidden;
+    overflow-x: hidden; /* Prevents side scrolling */
+    overflow-y: auto; /* ✅ Allows vertical scrolling */
 }
 
 * {
@@ -203,6 +204,7 @@ nav ul li a:hover {
     align-items: center; /* Centers content horizontally */
     margin-bottom: 0; /* Ensures no overlap with the next section */
     padding: 120px 20px;/* Reduce padding for a tighter fit */
+    overflow: visible; /* ✅ Allows scrolling */
 }
 
 .activities-container h2,
