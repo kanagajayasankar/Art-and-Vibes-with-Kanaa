@@ -208,7 +208,6 @@ nav ul li a:hover {
 }
 
 .activities-container h2,
-.gallery-container h2,
 #contact h2 {
     font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
     font-size: 2.8rem; /* Adjust size */
@@ -334,19 +333,25 @@ html {
     overflow: hidden;
 }
 
+.gallery-container h2{
+    text-align: center; /* Centers the title */
+    margin: 20px 0; /* Adds vertical spacing */
+    overflow: visible; /* Ensures the title isn't hidden */
+}
+
 /* 🔹 Horizontal Scroll */
 .gallery {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    scroll-behaviour: smooth;
     gap: 20px;
     padding: 20px;
     scrollbar-width: none;
-    white-space: nowrap; /* Ensures images stay in a single row */
+    
 }
 
 /* Hide scrollbar for WebKit browsers */
-.gallery-slider::-webkit-scrollbar {
+.gallery::-webkit-scrollbar {
     display: none;
 }
 
