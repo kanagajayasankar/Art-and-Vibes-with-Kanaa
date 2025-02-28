@@ -556,6 +556,8 @@ html {
     align-items: center;
     text-align: center;
     scroll-behavior: smooth;
+    margin-bottom:0;
+    margin-top:0;
    
 }
 
