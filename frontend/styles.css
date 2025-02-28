@@ -129,7 +129,7 @@ nav ul li a:hover {
     margin: auto;
     padding: 5px;
     gap: 5px;
-    min-height: 100vh; /* Ensures full viewport height */
+    max-height: 100vh; /* Ensures full viewport height */
     margin-top: 0;
     margin-bottom: 0;
     scroll-behavior: smooth;
