@@ -521,13 +521,19 @@ html {
 
 
 /* Contact Section */
+
 .contact {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
     padding-top: 5px;
     padding-bottom:20px;
     text-align: center;
     margin-top: 0;
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: space-between; /* Adds spacing between Enquiry Form & Contact Me */
+    gap: 40px; 
 }
+
 
 .contact-content {
     display: flex;
@@ -557,7 +563,7 @@ html {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
-    max-width: 900px; /* Increase width */
+    max-width: 450px; /* Increase width */
     height: auto;
     padding: 10px 40px;
 }
@@ -595,7 +601,10 @@ html {
 /* Contact Info */
 .contact-info {
     flex: 1;
-    text-align: left;
+    ext-align: center; /* Center aligns text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
 }
 
 .contact-info h2 {
