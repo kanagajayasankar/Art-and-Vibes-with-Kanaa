@@ -412,8 +412,8 @@ html {
 .experience-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
     text-align: center;
-    padding-top: 15px; /* Further reduce space above */
-    margin-top: 10px; /* Pull the section up slightly */
+    padding-top: 0px; /* Further reduce space above */
+    margin-top: 0px; /* Pull the section up slightly */
     
 }
 
