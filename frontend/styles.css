@@ -145,10 +145,10 @@ nav ul li a:hover {
 
 /* Activity Cards */
 .activity-card {
-    width: 240px; /* Wider cards */
-    height: 280x; /* Adjust if needed */
+    width: 260px; /* Wider cards */
+    height: 300x; /* Adjust if needed */
     flex: 1 1 calc(33.33% - 20px); /* Makes them fit in a row */
-    max-width: 280px; /* Ensures cards do not become too large */
+    max-width: 310px; /* Ensures cards do not become too large */
     align-items: center;
     position: relative; /* Ensure proper positioning */
     perspective: 1200px; /* Needed for 3D flip effect */
