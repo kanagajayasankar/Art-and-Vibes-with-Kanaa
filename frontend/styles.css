@@ -541,9 +541,9 @@ html {
 }
 
 .enquiry-form h2 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-top: 0;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     margin-top: 10px; 
 }
 
@@ -595,10 +595,10 @@ html {
 }
 
 .contact-info h2 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-bottom: 4px;
     margin-top: 0;
-    margin-top: 10px; 
+    margin-top: 8px; 
 }
 
 .contact-info p {
