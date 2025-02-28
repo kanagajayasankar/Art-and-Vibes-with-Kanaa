@@ -152,8 +152,8 @@ html {
     align-items: flex-start;
     max-width: 90%;
     margin: auto;
-    padding: 15px 0;
-    gap: 8px;
+    padding: 10px 0;
+    gap: 5px;
 }
 
 /* Flip Cards - Align Left */
@@ -167,10 +167,10 @@ html {
 
 /* Activity Cards */
 .activity-card {
-    width: 290px; /* Wider cards */
-    height: 320x; /* Adjust if needed */
+    width: 240px; /* Wider cards */
+    height: 280x; /* Adjust if needed */
     flex: 1 1 calc(33.33% - 20px); /* Makes them fit in a row */
-    max-width: 320px; /* Ensures cards do not become too large */
+    max-width: 300px; /* Ensures cards do not become too large */
     align-items: center;
     position: relative; /* Ensure proper positioning */
     perspective: 1200px; /* Needed for 3D flip effect */
@@ -207,7 +207,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 8px; /* Space between cards */
+    gap: 5px; /* Space between cards */
     padding: 10px
 }
 
