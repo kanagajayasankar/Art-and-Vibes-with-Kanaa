@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     font-family: 'Montserrat', sans-serif; /* Clean and modern for body text */
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Adjust this based on your header height */
+    scroll-padding-top: 120px; /* Adjust this based on your header height */
     overflow-y: auto;
 }
 
@@ -171,6 +171,8 @@ html {
     height: 340px; /* Adjust if needed */
     flex: 1 1 calc(33.33% - 20px); /* Makes them fit in a row */
     max-width: 320px; /* Ensures cards do not become too large */
+    position: relative; /* Ensure proper positioning */
+    perspective: 1200px; /* Needed for 3D flip effect */
 }
 
 /* Description - Align Right */
@@ -245,6 +247,7 @@ html {
     transition: transform 0.6s ease-in-out;
     position: relative;
     transform-origin: center;
+    display: block;
     
 }
 
