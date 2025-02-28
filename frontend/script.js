@@ -51,7 +51,7 @@ document.querySelectorAll("nav a").forEach(anchor => {
         if (targetSection) {
                         
             window.scrollTo({
-                top: targetSection.offsetTop - 100, // Adjust offset for fixed header
+                top: targetSection.offsetTop - 80, // Adjust offset for fixed header
                 behavior: "smooth"
             });
         }
