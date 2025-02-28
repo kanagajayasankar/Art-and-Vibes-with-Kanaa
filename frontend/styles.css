@@ -384,6 +384,7 @@ html {
     object-fit: cover;
     border-radius: 5px;
     display: block;
+    border: 2px solid red; 
 }
 
 /* 🔹 Caption Text (Mimicking Polaroid Description) */
