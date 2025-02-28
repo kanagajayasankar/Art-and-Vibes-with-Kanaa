@@ -411,7 +411,7 @@ html {
 /* Your Experience With Us - Scrolling Reviews */
 .experience-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
-    padding: 20px 20px;
+    padding: 5px;
     text-align: center;
     margin-top: 0;
     
@@ -521,7 +521,8 @@ html {
 /* Contact Section */
 .contact {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
-    padding: 20px 20px;
+    padding-top: 5px;
+    padding-bottom:20px;
     text-align: center;
     margin-top: 0;
 }
@@ -549,11 +550,13 @@ html {
 
 .contact-form {
     background: white;
-    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
+    max-width: 700px; /* Increase width */
+    height: auto;
+    padding: 15px 30px;
 }
 
 .contact-form input,
