@@ -118,42 +118,7 @@ section {
     text-align: center;
 }
 
-/* 🎯 Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
 
-/* 🔹 About Page Background */
-.about-container {
-    background: linear-gradient(to right, #e1bee7, #f8d7e3); /* Light Purple to Pink */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.about-container h1 {
-    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
-    font-size: 2.8rem; /* Adjust size */
-    font-weight: 700; /* Make it stand out */
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.about-container p {
-    font-family: 'Montserrat', sans-serif;
-    color: #555;
-    max-width: 800px;
-    line-height: 1.6;
-}
-
-/* 🎯 Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
 
 
 /* Parent Container */
@@ -577,6 +542,37 @@ html {
     background: #e67e22;
     transform: scale(1.05); /* Slight pop effect */
 }
+
+
+/* 🔹 About Page Background */
+.about-container {
+    background: linear-gradient(to right, #e1bee7, #f8d7e3); /* Light Purple to Pink */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.about-container h1 {
+    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
+    font-size: 2.8rem; /* Adjust size */
+    font-weight: 700; /* Make it stand out */
+    color: #333;
+    margin-bottom:0;
+    margin-top:0;
+}
+
+.about-container p {
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+
 
 
 /* Footer */
