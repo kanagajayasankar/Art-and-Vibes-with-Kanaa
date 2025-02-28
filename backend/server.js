@@ -46,3 +46,21 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+const express = require("express");
+const app = express();
+const path = require("path");
+
+app.use(express.static("public")); // Ensure static files are served
+
+// Route to serve the About page
+app.get("/about", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "about.html"));
+});
+
+// Start server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
+
