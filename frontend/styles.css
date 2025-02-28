@@ -485,10 +485,11 @@ html {
     min-height: 100vh; /* Makes each section at least the full height of the screen */
     width: 100%;
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3) !important; /* Light Purple to Pink */
-    padding: 80px 20px;
+    padding:20px;
+    gap: 20px
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     margin-top: 0;
 }
@@ -508,6 +509,8 @@ html {
     background-color: #fff; /* Ensures form has a white background */
     text-align: center; /* Centers the input elements */
     scroll-behavior: smooth;
+    flex: 1; /* Ensures both sections take equal width */
+    min-width: 300px; /* Prevents the sections from becoming too narrow */
 }
 
 .contact-form input,
@@ -573,6 +576,8 @@ html {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex: 1; /* Ensures both sections take equal width */
+    min-width: 300px; /* Prevents the sections from becoming too narrow */
 }
 
 /* Contact Me Heading */
@@ -580,11 +585,12 @@ html {
     font-size: 2rem;
     font-family: 'Playfair Display', serif;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .contact-info p {
     font-size: 1.1rem;
-    margin: 8px 0;
+    margin: 10px 0;
     color: #333;
 }
 
@@ -613,8 +619,8 @@ html {
 }
 
 .insta-logo {
-    width: 35px;  /* Adjust size */
-    height: 35px;
+    width: 25px;  /* Adjust size */
+    height: 25px;
     transition: transform 0.3s ease-in-out;
 }
 
