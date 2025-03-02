@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     galleryLeftArrow.addEventListener('click', () => scrollGallerySlider(-1));
     galleryRightArrow.addEventListener('click', () => scrollGallerySlider(1));
     
-    gallery.addEventListener('scroll', updateGalleryArrows);
+    gallerySlider.addEventListener('scroll', updateGalleryArrows);
     window.addEventListener('resize', updateGalleryArrows);
     setTimeout(updateGalleryArrows, 500);
 });
