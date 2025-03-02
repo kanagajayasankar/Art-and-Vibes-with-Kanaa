@@ -76,12 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
         reviewRightArrow.style.display = reviewSlider.scrollLeft + reviewSlider.clientWidth < reviewSlider.scrollWidth - 10 ? 'block' : 'none';
     }
 
-    reviewLeftArrow.addEventListener('click', () => scrollReviewSlider(-1));
-    reviewRightArrow.addEventListener('click', () => scrollReviewSlider(1));
+    reviewLeftArrow.addEventListener('click', () => scrollReview(-1));
+    reviewRightArrow.addEventListener('click', () => scrollReview(1));
 
     reviewSlider.addEventListener('scroll', updateReviewArrows);
     window.addEventListener('resize', updateReviewArrows);
-
     setTimeout(updateReviewArrows, 500);
 });
 
