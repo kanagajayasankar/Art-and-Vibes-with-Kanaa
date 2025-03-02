@@ -311,11 +311,6 @@ nav ul li a:hover {
     color: #f39c12;
 }
 
-/* 🎯 Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
 /* 🔹 Gallery Section */
 .gallery-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
