@@ -493,8 +493,8 @@ nav ul li a:hover {
 /* Review Card */
 .review-card {
     flex: 0 0 auto;
-    min-width: 300px;
-    max-width: 320px;
+    min-width: 240px;
+    max-width: 290px;
     background: white;
     padding: 20px;
     border-radius: 12px;
@@ -521,7 +521,7 @@ nav ul li a:hover {
 
 .review-card .text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: #444;
 }
 
