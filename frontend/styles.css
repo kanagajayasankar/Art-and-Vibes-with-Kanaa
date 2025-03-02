@@ -20,6 +20,7 @@ header {
     width: 100%;
     background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
     z-index: 1000;
+    top:0;
 }
 
 nav ul {
@@ -130,7 +131,7 @@ nav ul li a:hover {
     align-items: flex-start;
     max-width: 90%;
     margin: auto;
-    padding: 35x 0px; /* Reduce padding */
+    padding: 35px 0px; /* Reduce padding */
     gap: 20px; /* Adjust spacing between cards and description */
 }
 
@@ -146,7 +147,7 @@ nav ul li a:hover {
 /* Activity Cards */
 .activity-card {
     width: 260px; /* Wider cards */
-    height: 300x; /* Adjust if needed */
+    height: 300px; /* Adjust if needed */
     flex: 1 1 calc(33.33% - 20px); /* Makes them fit in a row */
     max-width: 310px; /* Ensures cards do not become too large */
     align-items: center;
@@ -454,6 +455,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .gallery {
         width: 95%;
+        flex-wrap: nowrap;
     }
 }
 
@@ -650,7 +652,7 @@ nav ul li a:hover {
 /* Contact Info */
 .contact-info {
     flex: 1;
-    ext-align: center; /* Center aligns text */
+    text-align: center; /* Center aligns text */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centers vertically */
