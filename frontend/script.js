@@ -59,7 +59,6 @@ document.querySelectorAll("nav a").forEach(anchor => {
 
 /*THE GALLERY SCROLLING CODE HERE  */
 
-
 document.addEventListener("DOMContentLoaded", function () {
     const gallery = document.querySelector('.gallery');
     const leftArrow = document.getElementById('leftArrow');
@@ -67,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!gallery || !leftArrow || !rightArrow) return;
 
-    const scrollAmount = 300;
+    const scrollAmount = gallery.clientWidth * 0.5; // Scroll half the width for better navigation
 
     function scrollGallery(direction) {
         gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
@@ -80,7 +79,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
     leftArrow.addEventListener('click', () => scrollGallery(-1));
     rightArrow.addEventListener('click', () => scrollGallery(1));
+
+    // Update arrows on scroll and resize
     gallery.addEventListener('scroll', updateArrows);
+    window.addEventListener('resize', updateArrows);
+
+    // Ensure arrows are updated when content loads
+    setTimeout(updateArrows, 100);
+
+    // Enable touch scrolling for mobile users
+    let startX, scrollLeft;
+
+    gallery.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].pageX;
+        scrollLeft = gallery.scrollLeft;
+    });
+
+    gallery.addEventListener("touchmove", (e) => {
+        const xDiff = e.touches[0].pageX - startX;
+        gallery.scrollLeft = scrollLeft - xDiff;
+    });
 
     updateArrows();
 });
+
+
+/*condition to allow external links*/
+document.querySelectorAll("nav a").forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+
+        // Allow external links to open normally
+        if (!href.startsWith("#")) return; 
+
+        e.preventDefault();
+        const targetSection = document.getElementById(href.substring(1));
+
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop - 80,
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
