@@ -493,8 +493,8 @@ nav ul li a:hover {
 /* Review Card */
 .review-card {
     flex: 0 0 auto;
-    min-width: 240px;
-    max-width: 290px;
+    width: 290px;
+    height: 330;
     background: white;
     padding: 20px;
     border-radius: 12px;
