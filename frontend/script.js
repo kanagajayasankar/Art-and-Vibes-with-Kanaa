@@ -61,8 +61,8 @@ document.querySelectorAll("nav a").forEach(anchor => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const gallery = document.querySelector('.gallery');
-    const leftArrow = document.getElementById('leftArrow');
-    const rightArrow = document.getElementById('rightArrow');
+    const leftArrow = document.getElementById('galleryLeftArrow');
+    const rightArrow = document.getElementById('galleryRightArrow');
 
     if (!gallery || !leftArrow || !rightArrow) return;
 
@@ -114,18 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelectorAll("nav a").forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         const href = this.getAttribute("href");
-
-        // Allow external links to open normally
-        if (!href.startsWith("#")) return; 
-
+        if (!href.startsWith("#")) return; // Allow external links
         e.preventDefault();
         const targetSection = document.getElementById(href.substring(1));
-
         if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop - 80,
-                behavior: "smooth"
-            });
+            window.scrollTo({ top: targetSection.offsetTop - 80, behavior: "smooth" });
         }
     });
 });
