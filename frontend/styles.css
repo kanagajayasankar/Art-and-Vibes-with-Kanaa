@@ -441,13 +441,12 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.scroll-btn.left {
-    left: 10px;
-    display: none;
+.gallery-slider-wrapper .scroll-btn.left {
+    left: -20px;
 }
 
-.scroll-btn.right {
-    right: 10px;
+.gallery-slider-wrapper .scroll-btn.right {
+    right: -20px;
 }
 
 /* 🔹 Caption Text (Mimicking Polaroid Description) */
@@ -476,21 +475,15 @@ nav ul li a:hover {
 
 .review-slider {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping so items stay in one row */
+    flex-wrap: nowrap; /* Prevent wrapping */
     overflow-x: auto;
-    overflow-y: hidden; /* Prevent vertical scrolling */
-    white-space: nowrap; /* Prevent items from wrapping */
+    scroll-snap-type: x mandatory;
     gap: 20px;
-    padding: 10px 0;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    width:95%;/* Adjust width as needed */
+    padding: 20px;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
     scroll-behavior: smooth;
 }
-
-
-
-
 
 .review-slider::-webkit-scrollbar {
     display: none;
@@ -558,13 +551,12 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.scroll-btn.left {
-    left: 10px;
-    display: none;
+.review-slider-wrapper .scroll-btn.left {
+    left: -20px;
 }
 
-.scroll-btn.right {
-    right: 10px;
+.review-slider-wrapper .scroll-btn.right {
+    right: -20px;
 }
 
 
