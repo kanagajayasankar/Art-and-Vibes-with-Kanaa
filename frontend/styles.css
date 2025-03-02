@@ -39,7 +39,6 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 20px;  /* Smaller font size */
-    padding: 200px 10px; /* Reduced link padding *//* Equal top and bottom padding */
     line-height: 0.1; /* Forces a tighter line height */
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
