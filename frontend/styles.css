@@ -812,10 +812,11 @@ footer {
     flex-wrap: nowrap; /* Force one row */
   }
   .activity-card {
-    flex: 0 0 80%;  /* Each card takes 80% of viewport width */
-    max-width: 80%;
-    margin: 10px auto;
-  }
+        min-width: 300px;
+        max-width: 320px;
+       margin: 10px auto;
+}
+   
 
   /* 4. Gallery & Review Arrows – Reduce size and reposition them */
   .gallery-slider-wrapper,
@@ -824,8 +825,8 @@ footer {
     margin: auto;
   }
   .scroll-btn {
-    font-size: 20px;
-    padding: 8px 12px;
+    font-size: 5px;
+    padding: 4px 6px;
   }
   /* Position arrows just outside the slider containers */
   .gallery-slider-wrapper .scroll-btn.left {
@@ -852,5 +853,29 @@ footer {
     margin: 0 auto;
     text-align: center;
   }
+
+    /* Hide the full nav menu by default on mobile */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    right: 0;
+    width: 80%;
+  }
+  
+  /* Show the hamburger icon */
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1100;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+}
 }
 
