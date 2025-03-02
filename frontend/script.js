@@ -76,8 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
         rightArrow.style.display = (gallery.scrollLeft + gallery.clientWidth < gallery.scrollWidth - 10) ? 'block' : 'none';
     }
 
-    leftArrow.addEventListener('click', () => scrollGallery(-1));
-    rightArrow.addEventListener('click', () => scrollGallery(1));
+    leftArrow.addEventListener('click', () => scrollGallerySlider(-1));
+    rightArrow.addEventListener('click', () => scrollGallerySlider(1));
     gallery.addEventListener('scroll', updateArrows);
     window.addEventListener('resize', updateArrows);
     setTimeout(updateArrows, 500);
