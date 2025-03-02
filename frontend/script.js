@@ -58,16 +58,16 @@ document.querySelectorAll("nav a").forEach(anchor => {
 
 
 /*THE GALLERY SCROLLING CODE HERE  */
+document.addEventListener("DOMContentLoaded", function () {
 
-const gallery = document.querySelector('.gallery');
-const galleryLeftArrow = document.getElementById('galleryLeftArrow');
-const galleryRightArrow = document.getElementById('galleryRightArrow');
+    const gallery = document.querySelector('.gallery');
+    const galleryLeftArrow = document.getElementById('galleryLeftArrow');
+    const galleryRightArrow = document.getElementById('galleryRightArrow');
 
-if (!gallery || !galleryLeftArrow || !galleryRightArrow) return;
-
+    if (!gallery || !galleryLeftArrow || !galleryRightArrow) return;
 
     function scrollGallery(direction) {
-        const scrollAmount = gallery.clientWidth * 0.5; 
+        const scrollAmount = gallery.clientWidth * 0.5; // scroll half the container width
         gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
 
@@ -83,6 +83,8 @@ if (!gallery || !galleryLeftArrow || !galleryRightArrow) return;
     window.addEventListener('resize', updateGalleryArrows);
     setTimeout(updateGalleryArrows, 500);
 });
+
+     
 
 /*THE review SCROLLING CODE HERE  */
 document.addEventListener("DOMContentLoaded", function () {
