@@ -58,7 +58,6 @@ document.querySelectorAll("nav a").forEach(anchor => {
 
 
 /*THE GALLERY SCROLLING CODE HERE  */
-
 document.addEventListener("DOMContentLoaded", function () {
     const gallery = document.querySelector('.gallery');
     const leftArrow = document.getElementById('leftArrow');
@@ -66,41 +65,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!gallery || !leftArrow || !rightArrow) return;
 
-    const scrollAmount = gallery.clientWidth * 0.5; // Scroll half the width for better navigation
-
     function scrollGallery(direction) {
+        const scrollAmount = gallery.clientWidth * 0.5; // Scroll half of gallery width
         gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
 
     function updateArrows() {
-        leftArrow.style.display = gallery.scrollLeft > 0 ? 'block' : 'none';
-        rightArrow.style.display = gallery.scrollLeft + gallery.clientWidth < gallery.scrollWidth ? 'block' : 'none';
+        leftArrow.style.display = gallery.scrollLeft > 10 ? 'block' : 'none';
+        rightArrow.style.display = gallery.scrollLeft + gallery.clientWidth < gallery.scrollWidth - 10 ? 'block' : 'none';
     }
 
     leftArrow.addEventListener('click', () => scrollGallery(-1));
     rightArrow.addEventListener('click', () => scrollGallery(1));
 
-    // Update arrows on scroll and resize
     gallery.addEventListener('scroll', updateArrows);
     window.addEventListener('resize', updateArrows);
 
-    // Ensure arrows are updated when content loads
-    setTimeout(updateArrows, 100);
-
-    // Enable touch scrolling for mobile users
-    let startX, scrollLeft;
-
-    gallery.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].pageX;
-        scrollLeft = gallery.scrollLeft;
-    });
-
-    gallery.addEventListener("touchmove", (e) => {
-        const xDiff = e.touches[0].pageX - startX;
-        gallery.scrollLeft = scrollLeft - xDiff;
-    });
-
-    updateArrows();
+    setTimeout(updateArrows, 500);
 });
 
 
