@@ -315,13 +315,14 @@ nav ul li a:hover {
 .gallery-container {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
     text-align: center;
+    width: 100%;
     position: relative; /* Needed for positioning arrows */
     min-height: 100vh; /* Ensures section takes up full viewport */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
-    padding: 80px 20px; /* Adjust padding for spacing */
+    padding: 20px 0; /* Adjust padding for spacing */
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -337,17 +338,22 @@ nav ul li a:hover {
 /* 🔹 Horizontal Scroll */
 .gallery {
     display: flex;
-    overflow-x: auto;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    white-space: nowrap; /* Prevent items from wrapping */
     scroll-behaviour: smooth;
     gap: 20px;
-    padding: 20px 0;
-    scrollbar-width: none;
+    padding: 10px 0;
+    scrollbar-width: none;/* Hide scrollbar for Firefox */
+    width:90%;/* Adjust width as needed */
+    -ms-overflow-style: none; /* Hide scrollbar for Edge */
+    
     
 }
 
 /* Hide scrollbar for WebKit browsers */
 .gallery::-webkit-scrollbar {
-    display: none;
+    display: none;/* Hide scrollbar for Chrome, Safari */
 }
 
 /* 🔹 Polaroid Frame for Gallery Items */
@@ -356,9 +362,11 @@ nav ul li a:hover {
     height: 330px;
     padding: 10px;
     background: white; /* White background for Polaroid effect */
+    margin:10px;
     border-radius: 10px; /* Slightly rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
     display: flex;
+    flex: 0 0 auto;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -377,17 +385,12 @@ nav ul li a:hover {
 }
 
 
-/* 🔹 Slight Rotation Effect on Hover */
-.gallery-item:hover {
-    transform: rotate(0deg) scale(1.05);
-}
-
 /* 🔹 Image Styling Inside Polaroid */
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures it fills the space by cropping */
-    border-radius: 5px;
+    border-radius: 10px;
     transition: transform 0.5s ease-in-out; /* Smooth transition */
     
 }
@@ -419,7 +422,7 @@ nav ul li a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
     cursor: pointer;
@@ -427,21 +430,28 @@ nav ul li a:hover {
     padding: 10px 15px;
     border-radius: 50%;
     transition: opacity 0.3s ease;
+    z-index: 10;
 }
 
 .scroll-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .left {
     left: 10px;
-    display: none; /* Initially hidden */
+
 }
 
 .right {
     right: 10px;
 }
 
+/* Ensure Gallery Visibility */
+@media (max-width: 768px) {
+    .gallery {
+        width: 95%;
+    }
+}
 
 
 /* Your Experience With Us - Scrolling Reviews */
