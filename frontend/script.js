@@ -58,6 +58,32 @@ document.querySelectorAll("nav a").forEach(anchor => {
 
 
 /*THE GALLERY SCROLLING CODE HERE  */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const gallery = document.querySelector('.gallery');
+    const leftArrow = document.getElementById('leftArrow');
+    const rightArrow = document.getElementById('rightArrow');
+
+    if (!gallery || !leftArrow || !rightArrow) return;
+
+    function scrollGallery(direction) {
+        const scrollAmount = gallery.clientWidth * 0.5; // scroll half the container width
+        gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+
+    function updateArrows() {
+        leftArrow.style.display = gallery.scrollLeft > 10 ? 'block' : 'none';
+        rightArrow.style.display = (gallery.scrollLeft + gallery.clientWidth < gallery.scrollWidth - 10) ? 'block' : 'none';
+    }
+
+    leftArrow.addEventListener('click', () => scrollGallery(-1));
+    rightArrow.addEventListener('click', () => scrollGallery(1));
+    gallery.addEventListener('scroll', updateArrows);
+    window.addEventListener('resize', updateArrows);
+    setTimeout(updateArrows, 500);
+});
+
+/*THE review SCROLLING CODE HERE  */
 document.addEventListener("DOMContentLoaded", function () {
     // Review slider arrow functionality
     const reviewSlider = document.querySelector('.review-slider');
@@ -72,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateReviewArrows() {
-        reviewLeftArrow.style.display = reviewSlider.scrollLeft > 10 ? 'block' : 'none';
+        reviewLeftArrow.style.display = reviewSlider.scrollLeft > 10 ? 'block': 'none';
         reviewRightArrow.style.display = reviewSlider.scrollLeft + reviewSlider.clientWidth < reviewSlider.scrollWidth - 10 ? 'block' : 'none';
     }
 
