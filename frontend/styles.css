@@ -66,6 +66,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     object-fit: cover;
+    background: rgba(0, 0, 0, 0.8);
     z-index: 1;
     margin-bottom: 0;
 }
