@@ -4,15 +4,14 @@ body, html {
     padding: 0;
     font-family: 'Montserrat', sans-serif; /* Clean and modern for body text */
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Adjust this based on your header height */
-    overflow-x: hidden; /* Prevents side scrolling */
-    overflow-y: auto; /* ✅ Allows vertical scrolling */
+    scroll-padding-top: 100px; /* Adjust based on header height */
+    overflow-x: hidden; /* Prevent side scrolling */
+    overflow-y: auto; /* Allows vertical scrolling */
 }
 
 * {
     box-sizing: border-box;
 }
-
 
 /* Navigation Bar */
 header {
@@ -20,7 +19,7 @@ header {
     width: 100%;
     background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
     z-index: 1000;
-    top:0;
+    top: 0;
 }
 
 nav ul {
@@ -41,11 +40,11 @@ nav ul li a {
     font-size: 24px;
     padding: 10px 15px;
     display: inline-block;
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Montserrat', sans-serif;
 }
 
 nav ul li a:hover {
-    color: #f4b400; /* Change to your preferred hover color */
+    color: #f4b400; /* Preferred hover color */
 }
 
 /* Landing Page */
@@ -58,7 +57,7 @@ nav ul li a:hover {
     color: #fff;
     text-align: center;
     overflow: hidden;
-    margin-bottom: 0; /* Ensures no overlap with the next section */
+    margin-bottom: 0; /* No overlap with next section */
 }
 
 .background-video {
@@ -68,8 +67,8 @@ nav ul li a:hover {
     width: 100%;
     object-fit: cover;
     z-index: 1;
-    margin-bottom: 0; /* Remove unwanted spacing */
- }
+    margin-bottom: 0;
+}
 
 .overlay {
     position: absolute;
@@ -82,18 +81,17 @@ nav ul li a:hover {
 }
 
 .landing-content {
-   position: relative;
+    position: relative;
     z-index: 2;
-    color: white; /* Ensures text is visible */
+    color: white;
     text-align: center;
     padding: 20px;
-    
 }
 
 .landing-content h1 {
-    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
-    font-size: 2.8rem; /* Adjust size */
-    font-weight: 700; /* Make it stand out */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 
 .landing-content p {
@@ -112,7 +110,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background: #e67e22; /* Darker shade on hover */
+    background: #e67e22;
 }
 
 /* Sections */
@@ -121,63 +119,57 @@ nav ul li a:hover {
     text-align: center;
 }
 
-
-
-
-/* Parent Container */
+/* Workshop Section */
 .workshop-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     max-width: 90%;
     margin: auto;
-    padding: 35px 0px; /* Reduce padding */
-    gap: 20px; /* Adjust spacing between cards and description */
+    padding: 35px 0;
+    gap: 20px;
 }
 
-/* Flip Cards - Align Left */
+/* Flip Cards - Left */
 .flip-cards {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    justify-content: flex-start; /* Keeps cards aligned to the left */
+    justify-content: flex-start;
 }
 
 /* Activity Cards */
 .activity-card {
-    width: 260px; /* Wider cards */
-    height: 300px; /* Adjust if needed */
-    flex: 1 1 calc(33.33% - 20px); /* Makes them fit in a row */
-    max-width: 310px; /* Ensures cards do not become too large */
+    width: 260px;
+    height: 300px;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: 310px;
     align-items: center;
-    position: relative; /* Ensure proper positioning */
-    perspective: 1000px; /* Needed for 3D flip effect */
-    display: flex; /* Ensure it is visible */
+    position: relative;
+    perspective: 1000px;
+    display: flex;
     justify-content: center;
     margin: 5px;
 }
 
-
-/* Description - Align Right */
+/* Workshop Description */
 .workshop-description {
     flex: 1;
     max-width: 40%;
     text-align: left;
     padding: 40px;
-    min-height: auto; /* Ensures full viewport height */
-    
- }
+    min-height: auto;
+}
 
 .workshop-description h2 {
-    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
-    font-size: 2.8rem; /* Adjust size */
-    font-weight: 700; /* Make it stand out */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
     color: #333;
     margin-bottom: 10px;
-    min-height: auto; /* Remove fixed height */
-    max-width: 50%; /* Adjust width to balance with cards */
-    padding: 20px; /* Reduce padding */
+    max-width: 50%;
+    padding: 20px;
 }
 
 .workshop-description p {
@@ -186,37 +178,37 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
-/* Card Container - Arrange Cards Side by Side */
+/* Card Container */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 5px; /* Space between cards */
-    padding: 10px
+    gap: 5px;
+    padding: 10px;
 }
 
-
+/* Activities Container */
 .activities-container {
-    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
-    min-height: 100vh; /* Makes each section at least the full height of the screen */
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content vertically */
-    align-items: center; /* Centers content horizontally */
-    margin-bottom: 0; /* Ensures no overlap with the next section */
-    padding: 120px 20px;/* Reduce padding for a tighter fit */
-    overflow: visible; /* ✅ Allows scrolling */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 120px 20px;
+    overflow: visible;
 }
 
 .activities-container h2,
 #contact h2 {
-    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
-    font-size: 2.8rem; /* Adjust size */
-    font-weight: 700; /* Make it stand out */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
     margin-bottom: 1.5rem;
 }
 
-
+/* Card Inner & Flip Effect */
 .card-inner {
     width: 100%;
     height: 100%;
@@ -225,7 +217,6 @@ nav ul li a:hover {
     position: relative;
     transform-origin: center;
     display: block;
-    
 }
 
 .activity-card.flipped .card-inner {
@@ -235,6 +226,7 @@ nav ul li a:hover {
     right: 0;
 }
 
+/* Card Front & Back */
 .card-front, .card-back {
     width: 100%;
     height: 100%;
@@ -243,7 +235,7 @@ nav ul li a:hover {
     left: 0;
     backface-visibility: hidden;
     border-radius: 12px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -252,43 +244,44 @@ nav ul li a:hover {
 }
 
 .card-front {
-    position: relative; /* Ensures absolute children are contained */
+    position: relative;
     background: linear-gradient(to bottom, #f8d7e3, #e1bee7);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: 10px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-    height: 100%; /* Make sure it fills the card */
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+    height: 100%;
 }
 
 .card-front img {
     width: 100%;
-    height: 80%; /* Adjust this to make space for the text */
+    height: 80%;
     object-fit: cover;
     border-radius: 5px;
 }
-/* Fix Activity Name Position */
+
+/* Activity Name on Card Front */
 .card-front .activity-name {
     width: 100%;
-    height: 10%; /* Adjust height to fit text */
+    height: 10%;
     font-size: 16px;
     font-weight: bold;
-    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
+    font-family: 'Playfair Display', serif;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     border-top: 2px solid black;
-    background: rgba(0, 0, 0, 0.5); /* Darker background for readability */
+    background: rgba(0,0,0,0.5);
     border-radius: 0 0 10px 10px;
     position: absolute;
-    bottom: 0; /* Stick to the bottom */
+    bottom: 0;
     left: 0;
 }
 
-
+/* Card Back */
 .card-back {
     background: #f8f8f8;
     transform: rotateY(180deg);
@@ -316,31 +309,30 @@ nav ul li a:hover {
     color: #f39c12;
 }
 
-/* 🔹 Gallery Section */
+/* Combined Gallery & Experience Section */
 .combined-gallery-experience {
     background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
     text-align: center;
     width: 100%;
-    position: relative; /* Needed for positioning arrows */
-    min-height: 100vh; /* Ensures section takes up full viewport */
+    position: relative;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content vertically */
-    align-items: center; /* Centers content horizontally */
-    padding: 60px 20px;/* Adjust padding for spacing */
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
     overflow: hidden;
 }
-
 
 .combined-gallery-experience h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
     font-weight: 700;
     color: #333;
-    margin-top: 20px 0 30px;
-    z-index: 5; /* Ensures it stays visible */
-    text-align: center; /* Centers the title */
-    overflow: visible; /* Ensures the title isn't hidden */
+    margin: 20px 0 30px;
+    z-index: 5;
+    text-align: center;
+    overflow: visible;
 }
 
 /* Gallery Slider Wrapper */
@@ -348,110 +340,68 @@ nav ul li a:hover {
     position: relative;
     width: 90%;
     margin: auto;
-    margin-bottom: 40px;  /* Space between gallery and reviews */
+    margin-bottom: 40px;
 }
 
-/* 🔹 Horizontal Scroll */
+/* Horizontal Gallery Scroll */
 .gallery {
     display: flex;
-    overflow-x: auto; /* Allow horizontal scrolling */
-    overflow-y: hidden; /* Prevent vertical scrolling */
-    white-space: nowrap; /* Prevent items from wrapping */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
     scroll-behaviour: smooth;
     gap: 20px;
     padding: 10px 0;
-    scrollbar-width: none;/* Hide scrollbar for Firefox */
-    width:95%;/* Adjust width as needed */
-    -ms-overflow-style: none; /* Hide scrollbar for Edge */
-    
-    
+    scrollbar-width: none;
+    width: 95%;
+    -ms-overflow-style: none;
 }
 
-/* Hide scrollbar for WebKit browsers */
 .gallery::-webkit-scrollbar {
-    display: none;/* Hide scrollbar for Chrome, Safari */
+    display: none;
 }
 
-/* 🔹 Polaroid Frame for Gallery Items */
+/* Gallery Item (Polaroid Frame) */
 .gallery-item {
     width: 300px;
     height: 330px;
     padding: 10px;
-    background: white; /* White background for Polaroid effect */
-    margin:10px;
-    border-radius: 10px; /* Slightly rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    background: white;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     justify-content: flex-start;
-    scroll-snap-align: start; /* Ensures smooth scrolling */
+    scroll-snap-align: start;
     overflow: hidden;
-    padding-bottom: 50px; /* Space for caption */
+    padding-bottom: 50px;
     position: relative;
     transition: transform 0.5s ease-in-out;
-   
 }
 
 .gallery-item:hover {
-    transform: scale(1.05); /* Slightly enlarge and tilt */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow for depth */
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-
-/* 🔹 Image Styling Inside Polaroid */
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures it fills the space by cropping */
+    object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.5s ease-in-out; /* Smooth transition */
-    
+    transition: transform 0.5s ease-in-out;
 }
 
-/* Make the Image Zoom More */
 .gallery-item:hover img {
-    transform: scale(2); /* Image zooms slightly inside the frame */
-    
+    transform: scale(2);
 }
 
-.gallery-slider--wrapper {
-    position: relative;
-    width: 90%;
-}
-
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px 15px;
-    border-radius: 50%;
-    transition: opacity 0.3s ease;
-    z-index: 10;
-}
-
-.scroll-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.gallery-slider-wrapper .scroll-btn.left {
-    left: -20px;
-}
-
-.gallery-slider-wrapper .scroll-btn.right {
-    right: -20px;
-}
-
-/* 🔹 Caption Text (Mimicking Polaroid Description) */
+/* Polaroid Caption */
 .polaroid-caption {
-    font-family: 'Dancing Script', cursive; /* Handwritten font */
+    font-family: 'Dancing Script', cursive;
     font-size: 18px;
     font-weight: bold;
     color: #333;
@@ -465,23 +415,51 @@ nav ul li a:hover {
     border-top: 2px solid #ddd;
 }
 
+/* Gallery Scroll Arrows */
+.gallery-slider-wrapper .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.gallery-slider-wrapper .scroll-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.gallery-slider-wrapper .scroll-btn.left {
+    left: -20px;
+}
+
+.gallery-slider-wrapper .scroll-btn.right {
+    right: -20px;
+}
+
 /* Review Slider Wrapper */
 .review-slider-wrapper {
     position: relative;
     width: 90%;
     margin: auto;
-    margin-bottom: 40px; /* Adjust space between sections */
+    margin-bottom: 40px;
 }
 
 .review-slider {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 20px;
     padding: 20px;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     scroll-behavior: smooth;
 }
 
@@ -497,15 +475,14 @@ nav ul li a:hover {
     background: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     text-align: center;
     scroll-snap-align: center;
     scroll-behavior: smooth;
-    flex-wrap: nowrap; /* Prevent wrapping so items stay in one row */
+    flex-wrap: nowrap;
 }
 
-
-/* Name */
+/* Review Card Text */
 .review-card .name {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -513,30 +490,24 @@ nav ul li a:hover {
     margin-bottom: 5px;
 }
 
-/* Rating */
 .review-card .rating {
     color: #f39c12;
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-/* Review Text */
 .review-card .text {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     color: #444;
 }
 
-.review-slider-wrapper {
-    position: relative;
-    width: 90%;
-}
-
-.scroll-btn {
+/* Review Slider Arrows */
+.review-slider-wrapper .scroll-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0,0,0,0.6);
     color: white;
     border: none;
     cursor: pointer;
@@ -547,8 +518,8 @@ nav ul li a:hover {
     z-index: 10;
 }
 
-.scroll-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.review-slider-wrapper .scroll-btn:hover {
+    background-color: rgba(0,0,0,0.8);
 }
 
 .review-slider-wrapper .scroll-btn.left {
@@ -559,66 +530,18 @@ nav ul li a:hover {
     right: -20px;
 }
 
-
-
-/* Ensure Gallery Visibility */
-@media (max-width: 768px) {
-    .gallery {
-        width: 95%;
-        flex-wrap: nowrap;
-    }
-}
-
-
-
-
-
-/* 🔹 About Page Background */
-.about-container {
-    background: linear-gradient(to right, #e1bee7, #f8d7e3); /* Light Purple to Pink */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    scroll-behavior: smooth;
-    margin-bottom:0;
-    margin-top:0;
-   
-}
-
-.about-container h1 {
-    font-family: 'Playfair Display', serif; /* Artistic and elegant for titles */
-    font-size: 2.8rem; /* Adjust size */
-    font-weight: 700; /* Make it stand out */
-    color: #333;
-    margin-bottom:0;
-    margin-top:0;
-}
-
-.about-container p {
-    font-family: 'Montserrat', sans-serif;
-    color: #555;
-    max-width: 800px;
-    line-height: 1.6;
-}
-
-
 /* Contact Section */
-
 .contact {
-    background: linear-gradient(to bottom, #e1bee7, #f8d7e3); /* Light Purple to Pink */
+    background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
     padding-top: 5px;
-    padding-bottom:20px;
+    padding-bottom: 20px;
     text-align: center;
     margin-top: 0;
     display: flex;
-    align-items: center; /* Centers content vertically */
-    justify-content: space-between; /* Adds spacing between Enquiry Form & Contact Me */
-    gap: 120px; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
 }
-
 
 .contact-content {
     display: flex;
@@ -637,18 +560,17 @@ nav ul li a:hover {
 
 .enquiry-form h2 {
     font-size: 1.3rem;
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 8px;
-    margin-top: 10px; 
 }
 
 .contact-form {
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     text-align: center;
     width: 100%;
-    max-width: 380px; /* Increase width */
+    max-width: 380px;
     height: auto;
     padding: 10px 40px;
 }
@@ -686,18 +608,17 @@ nav ul li a:hover {
 /* Contact Info */
 .contact-info {
     flex: 1;
-    text-align: center; /* Center aligns text */
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers vertically */
-    align-items: center; /* ✅ Centers horizontally */
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-info h2 {
     font-size: 1.3rem;
+    margin-top: 8px;
     margin-bottom: 4px;
-    margin-top: 0;
-    margin-top: 8px; 
 }
 
 .contact-info p {
@@ -710,15 +631,36 @@ nav ul li a:hover {
     height: 40px;
 }
 
-/* Footer */
-footer {
-    font-family: 'Montserrat', sans-serif;
-    background: #333;
-    color: #fff;
+/* About Page */
+.about-container {
+    background: linear-gradient(to right, #e1bee7, #f8d7e3);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20
-::contentReference[oaicite:0]{index=0}
- 
+    scroll-behavior: smooth;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.about-container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.about-container p {
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
 /* Footer */
 footer {
     font-family: 'Montserrat', sans-serif;
@@ -726,4 +668,97 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
+}
+
+/* Responsive Media Queries */
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    body, html {
+        font-size: 14px;
+        scroll-padding-top: 80px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    .workshop-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .workshop-description {
+        max-width: 90%;
+        padding: 20px;
+    }
+    .gallery, .review-slider {
+        width: 95%;
+    }
+    .gallery-item, .review-card {
+        width: 90%;
+        max-width: none;
+    }
+    .gallery-slider-wrapper .scroll-btn.left,
+    .gallery-slider-wrapper .scroll-btn.right,
+    .review-slider-wrapper .scroll-btn.left,
+    .review-slider-wrapper .scroll-btn.right {
+        left: 5px;
+        right: 5px;
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+}
+
+/* Tablet (min-width: 481px and max-width: 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body, html {
+        font-size: 15px;
+        scroll-padding-top: 90px;
+    }
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .workshop-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .workshop-description {
+        max-width: 90%;
+        padding: 30px;
+    }
+    .gallery, .review-slider {
+        width: 95%;
+    }
+    .gallery-item, .review-card {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+/* Desktop (min-width: 769px) */
+@media screen and (min-width: 769px) {
+    body, html {
+        font-size: 16px;
+        scroll-padding-top: 100px;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+    .workshop-section {
+        flex-direction: row;
+    }
+    .workshop-description {
+        max-width: 40%;
+        padding: 40px;
+    }
+    .gallery, .review-slider {
+        width: 90%;
+    }
+    .gallery-item {
+        width: 300px;
+        height: 330px;
+    }
+    .review-card {
+        min-width: 300px;
+        max-width: 320px;
+    }
 }
