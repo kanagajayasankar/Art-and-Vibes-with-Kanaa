@@ -91,21 +91,30 @@ nav ul li a:hover {
   z-index: 2;
 }
 
-.landing-content h1 {
+.landing-title {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .landing-content p {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   line-height: 1.5;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.landing-text .tagline-top,
+.landing-text .tagline-bottom {
+  display: block;
+  margin: 0.5em 0;
 }
 
 .btn {
