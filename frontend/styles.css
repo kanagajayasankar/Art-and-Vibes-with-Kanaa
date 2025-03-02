@@ -416,6 +416,35 @@ nav ul li a:hover {
     
 }
 
+/* Scroll Arrows */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+scroll-btn.left {
+    left: -20px;
+
+}
+
+scroll-btn.right {
+    right: -20px;
+}
+
 /* 🔹 Caption Text (Mimicking Polaroid Description) */
 .polaroid-caption {
     font-family: 'Dancing Script', cursive; /* Handwritten font */
@@ -441,10 +470,11 @@ nav ul li a:hover {
 /* Review Slider */
 .review-slider {
     display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping so items stay in one row */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 20px;
-    padding: 20px 0;
+    padding: 20px;
     scrollbar-width: none;/* Hide scrollbar */
     -ms-overflow-style: none;/* Hide scrollbar for IE and Edge */
     scroll-behavior: smooth;
@@ -513,12 +543,12 @@ nav ul li a:hover {
 }
 
 scroll-btn.left {
-    left: 10px;
+    left: -20px;
 
 }
 
 scroll-btn.right {
-    right: 10px;
+    right: -20px;
 }
 
 /* Ensure Gallery Visibility */
