@@ -345,7 +345,7 @@ html {
     overflow-x: auto;
     scroll-behaviour: smooth;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 0;
     scrollbar-width: none;
     
 }
