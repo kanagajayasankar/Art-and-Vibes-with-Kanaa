@@ -61,26 +61,27 @@ document.querySelectorAll("nav a").forEach(anchor => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const gallery = document.querySelector('.gallery');
-    const leftArrow = document.getElementById('galleryLeftArrow');
-    const rightArrow = document.getElementById('galleryRightArrow');
+    const galleryLeftArrow = document.getElementById('galleryLeftArrow');
+    const galleryRightArrow = document.getElementById('galleryRightArrow');
 
-    if (!gallery || !leftArrow || !rightArrow) return;
+    if (!gallerySlider || !galleryLeftArrow || !galleryRightArrow) return;
 
-    function scrollGallery(direction) {
-        const scrollAmount = gallery.clientWidth * 0.5; // scroll half the container width
-        gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    function scrollGallerySlider(direction) {
+        const scrollAmount = gallerySlider.clientWidth * 0.5; // scroll half the container width
+        gallerySlider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
 
-    function updateArrows() {
-        leftArrow.style.display = gallery.scrollLeft > 10 ? 'block' : 'none';
-        rightArrow.style.display = (gallery.scrollLeft + gallery.clientWidth < gallery.scrollWidth - 10) ? 'block' : 'none';
+    function updateGalleryArrows() {
+        galleryLeftArrow.style.display = gallerySlider.scrollLeft > 10 ? 'block' : 'none';
+        galleryRightArrow.style.display = (gallerySlider.scrollLeft + gallerySlider.clientWidth < gallerySlider.scrollWidth - 10) ? 'block' : 'none';
     }
 
-    leftArrow.addEventListener('click', () => scrollGallerySlider(-1));
-    rightArrow.addEventListener('click', () => scrollGallerySlider(1));
-    gallery.addEventListener('scroll', updateArrows);
-    window.addEventListener('resize', updateArrows);
-    setTimeout(updateArrows, 500);
+    galleryLeftArrow.addEventListener('click', () => scrollGallerySlider(-1));
+    galleryRightArrow.addEventListener('click', () => scrollGallerySlider(1));
+    
+    gallery.addEventListener('scroll', updateGalleryArrows);
+    window.addEventListener('resize', updateGalleryArrows);
+    setTimeout(updateGalleryArrows, 500);
 });
 
 /*THE review SCROLLING CODE HERE  */
