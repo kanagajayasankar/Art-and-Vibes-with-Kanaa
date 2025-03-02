@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#activities">Activities</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#gallery-experience">Gallery</a></li>
                 <li><a href="/about.html" target="_self">About Me</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -62,20 +62,24 @@
 </section>
 
 
-    <!-- Gallery Section -->
-<section class="gallery-container" id="gallery">
-    <h2>Gallery</h2>
-    <button class="scroll-btn left" id="leftArrow">&#10094;</button> <!-- Left Arrow -->
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="images/workshop1.jpg" alt="Gallery Image">
-            <div class="polaroid-caption">Memorable Moment 1</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/gallery-image2.jpg" alt="Gallery Image">
-            <div class="polaroid-caption">Beautiful Scene</div>
-        </div>
-        <div class="gallery-item">
+
+<!-- Combined Gallery & Experience Section -->
+<section class="combined-gallery-experience" id="gallery-experience">
+  <h2>Gallery & Experiences</h2>
+  
+  <!-- Gallery Slider Wrapper -->
+  <div class="gallery-slider-wrapper">
+      <button class="scroll-btn left" id="galleryLeftArrow">&#10094;</button>
+      <div class="gallery">
+          <div class="gallery-item">
+              <img src="images/workshop1.jpg" alt="Gallery Image">
+              <div class="polaroid-caption">Memorable Moment 1</div>
+          </div>
+          <div class="gallery-item">
+              <img src="images/gallery-image2.jpg" alt="Gallery Image">
+              <div class="polaroid-caption">Beautiful Scene</div>
+          </div>
+          <div class="gallery-item">
             <img src="your-image3.jpg" alt="Gallery Image">
             <div class="polaroid-caption">Unforgettable Time</div>
         </div>
@@ -115,31 +119,30 @@
             <img src="your-image12.jpg" alt="Gallery Image">
             <div class="polaroid-caption">Unforgettable Time</div>
         </div>
-    </div>
-    <button class="scroll-btn right" id="rightArrow">&#10095;</button> <!-- Right Arrow -->
-</section>
-
-<!-- Your Experience With Us Section -->
-<section class="experience-container" id="experience">
-    <h2>Your Experience With Us</h2>
-    <div class="review-slider">
-         <!-- Review 1 -->
-        <div class="review-card">
-            <img src="images/avatar1.png" alt="User 1">
-            <div class="name">Sophia R.</div>
-            <div class="rating">⭐⭐⭐⭐⭐</div>
-            <p class="text">"Absolutely loved the experience! The atmosphere was fantastic, and the activities were so much fun."</p>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="review-card">
-            <img src="images/avatar2.png" alt="User 2">
-            <div class="name">Michael J.</div>
-            <div class="rating">⭐⭐⭐⭐</div>
-            <p class="text">"A great place to relax and enjoy art. I’ll definitely visit again!"</p>
-        </div>
-
-         <!-- Review 3 -->
+          <!-- Add more gallery-item divs as needed -->
+      </div>
+      <button class="scroll-btn right" id="galleryRightArrow">&#10095;</button>
+  </div>
+  
+  <!-- Review Slider Wrapper -->
+  <div class="review-slider-wrapper">
+      <button class="scroll-btn left" id="reviewLeftArrow">&#10094;</button>
+      <div class="review-slider">
+          <div class="review-card">
+              <img src="images/avatar1.png" alt="User 1">
+              <div class="name">Sophia R.</div>
+              <div class="rating">⭐⭐⭐⭐⭐</div>
+              <p class="text">"Absolutely loved the experience! The atmosphere was fantastic."</p>
+          </div>
+          <div class="review-card">
+              <img src="images/avatar2.png" alt="User 2">
+              <div class="name">Michael J.</div>
+              <div class="rating">⭐⭐⭐⭐</div>
+              <p class="text">"A great place to relax and enjoy art. I’ll visit again!"</p>
+          </div>
+          <!-- Add more review-card divs as needed -->
+      </div>
+      <!-- Review 3 -->
         <div class="review-card">
             <img src="images/avatar3.png" alt="User 2">
             <div class="name">Jenny.</div>
@@ -185,8 +188,23 @@
             <div class="rating">⭐⭐⭐⭐⭐</div>
             <div class="text">Loved every moment! Will visit again.</div>
         </div>
-    </div>
+        <div class="review-card">
+            <img src="placeholder.jpg" alt="User Image">
+            <div class="name">John Doe</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <div class="text">Amazing experience! Highly recommended.</div>
+        </div>
+        
+        <div class="review-card">
+            <img src="placeholder.jpg" alt="User Image">
+            <div class="name">Jane Smith</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <div class="text">Loved every moment! Will visit again.</div>
+        </div>
+      <button class="scroll-btn right" id="reviewRightArrow">&#10095;</button>
+  </div>
 </section>
+
 
 <!-- Contact Section -->
 <section class="contact" id="contact">
