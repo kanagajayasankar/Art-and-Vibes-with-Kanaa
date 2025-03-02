@@ -42,7 +42,7 @@ nav ul li a {
     color: white;
     font-size: 20px;  /* Smaller font size */
     padding: 2px 10px; /* Reduced link padding *//* Equal top and bottom padding */
-    line-height: 0.4; /* Forces a tighter line height */
+    line-height: 0.2; /* Forces a tighter line height */
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
 }
