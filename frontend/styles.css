@@ -328,9 +328,6 @@ nav ul li a:hover {
     justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
     padding: 60px 20px;/* Adjust padding for spacing */
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
     overflow: hidden;
 }
 
@@ -340,8 +337,7 @@ nav ul li a:hover {
     font-size: 2.8rem;
     font-weight: 700;
     color: #333;
-    margin-top: 20px;/* Adds vertical spacing */
-    margin-bottom: 30px;
+    margin-top: 20px 0 30px;
     z-index: 5; /* Ensures it stays visible */
     text-align: center; /* Centers the title */
     overflow: visible; /* Ensures the title isn't hidden */
@@ -351,6 +347,7 @@ nav ul li a:hover {
 .gallery-slider-wrapper {
     position: relative;
     width: 90%;
+    margin: auto;
     margin-bottom: 40px;  /* Space between gallery and reviews */
 }
 
@@ -364,7 +361,7 @@ nav ul li a:hover {
     gap: 20px;
     padding: 10px 0;
     scrollbar-width: none;/* Hide scrollbar for Firefox */
-    width:90%;/* Adjust width as needed */
+    width:95%;/* Adjust width as needed */
     -ms-overflow-style: none; /* Hide scrollbar for Edge */
     
     
@@ -399,7 +396,7 @@ nav ul li a:hover {
 }
 
 .gallery-item:hover {
-    transform: scale(1.05) rotate(-2deg); /* Slightly enlarge and tilt */
+    transform: scale(1.05); /* Slightly enlarge and tilt */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow for depth */
 }
 
@@ -418,35 +415,6 @@ nav ul li a:hover {
 .gallery-item:hover img {
     transform: scale(2); /* Image zooms slightly inside the frame */
     
-}
-
-/* Scroll Arrows */
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px 15px;
-    border-radius: 50%;
-    transition: opacity 0.3s ease;
-    z-index: 10;
-}
-
-.scroll-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.scroll-btn.left {
-    left: -20px;
-
-}
-
-.scroll-btn.right {
-    right: -20px;
 }
 
 /* 🔹 Caption Text (Mimicking Polaroid Description) */
@@ -469,6 +437,8 @@ nav ul li a:hover {
 .review-slider-wrapper {
     position: relative;
     width: 90%;
+    margin: auto;
+    margin-bottom: 40px; /* Adjust space between sections */
 }
 
 .review-slider {
@@ -548,14 +518,25 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.scroll-btn.left {
+.gallery-slider-wrapper.scroll-btn.left {
     left: -20px;
 
 }
 
-.scroll-btn.right {
+.gallery-slider-wrapper.scroll-btn.right {
     right: -20px;
 }
+
+.review-slider-wrapper.scroll-btn.left {
+    left: -20px;
+
+}
+
+.review-slider-wrapper.scroll-btn.right {
+    right: -20px;
+}
+
+
 
 /* Ensure Gallery Visibility */
 @media (max-width: 768px) {
