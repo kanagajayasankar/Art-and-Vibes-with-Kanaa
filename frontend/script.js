@@ -59,27 +59,27 @@ document.querySelectorAll("nav a").forEach(anchor => {
 
 /*THE GALLERY SCROLLING CODE HERE  */
 
-document.addEventListener("DOMContentLoaded", function () {
-    const gallery = document.querySelector('.gallery');
-    const galleryLeftArrow = document.getElementById('galleryLeftArrow');
-    const galleryRightArrow = document.getElementById('galleryRightArrow');
+const gallery = document.querySelector('.gallery');
+const galleryLeftArrow = document.getElementById('galleryLeftArrow');
+const galleryRightArrow = document.getElementById('galleryRightArrow');
 
-    if (!gallerySlider || !galleryLeftArrow || !galleryRightArrow) return;
+if (!gallery || !galleryLeftArrow || !galleryRightArrow) return;
 
-    function scrollGallerySlider(direction) {
-        const scrollAmount = gallerySlider.clientWidth * 0.5; // scroll half the container width
-        gallerySlider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+
+    function scrollGallery(direction) {
+        const scrollAmount = gallery.clientWidth * 0.5; 
+        gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
 
     function updateGalleryArrows() {
-        galleryLeftArrow.style.display = gallerySlider.scrollLeft > 10 ? 'block' : 'none';
-        galleryRightArrow.style.display = (gallerySlider.scrollLeft + gallerySlider.clientWidth < gallerySlider.scrollWidth - 10) ? 'block' : 'none';
+        galleryLeftArrow.style.display = gallery.scrollLeft > 10 ? 'block' : 'none';
+        galleryRightArrow.style.display = (gallery.scrollLeft + gallery.clientWidth < gallery.scrollWidth - 10) ? 'block' : 'none';
     }
 
-    galleryLeftArrow.addEventListener('click', () => scrollGallerySlider(-1));
-    galleryRightArrow.addEventListener('click', () => scrollGallerySlider(1));
-    
-    gallerySlider.addEventListener('scroll', updateGalleryArrows);
+    galleryLeftArrow.addEventListener('click', () => scrollGallery(-1));
+    galleryRightArrow.addEventListener('click', () => scrollGallery(1));
+
+    gallery.addEventListener('scroll', updateGalleryArrows);
     window.addEventListener('resize', updateGalleryArrows);
     setTimeout(updateGalleryArrows, 500);
 });
