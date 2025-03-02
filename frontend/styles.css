@@ -491,6 +491,7 @@ nav ul li a:hover {
 
 /* Review Card */
 .review-card {
+    flex: 0 0 auto;
     min-width: 300px;
     max-width: 320px;
     background: white;
