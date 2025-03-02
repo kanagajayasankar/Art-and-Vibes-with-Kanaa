@@ -21,7 +21,7 @@ header {
     background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
     z-index: 1000;
     margin-top: 0;
-    padding: 2px 0;  /* Reduced vertical padding */
+    padding: 200px 0;  /* Reduced vertical padding */
     margin: 0;
 }
 
