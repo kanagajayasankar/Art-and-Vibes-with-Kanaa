@@ -478,13 +478,17 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: nowrap; /* Prevent wrapping so items stay in one row */
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    white-space: nowrap; /* Prevent items from wrapping */
     gap: 20px;
-    padding: 20px;
+    padding: 10px 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    width:95%;/* Adjust width as needed */
     scroll-behavior: smooth;
 }
+
+
 
 
 
