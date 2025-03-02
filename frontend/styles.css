@@ -436,12 +436,12 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-scroll-btn.left {
+.scroll-btn.left {
     left: -20px;
 
 }
 
-scroll-btn.right {
+.scroll-btn.right {
     right: -20px;
 }
 
@@ -467,18 +467,18 @@ scroll-btn.right {
     width: 90%;
 }
 
-/* Review Slider */
 .review-slider {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping so items stay in one row */
+    flex-wrap: nowrap; /* Prevent wrapping */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 20px;
     padding: 20px;
-    scrollbar-width: none;/* Hide scrollbar */
-    -ms-overflow-style: none;/* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
     scroll-behavior: smooth;
 }
+
 
 
 .review-slider::-webkit-scrollbar {
@@ -543,12 +543,12 @@ scroll-btn.right {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-scroll-btn.left {
+.scroll-btn.left {
     left: -20px;
 
 }
 
-scroll-btn.right {
+.scroll-btn.right {
     right: -20px;
 }
 
