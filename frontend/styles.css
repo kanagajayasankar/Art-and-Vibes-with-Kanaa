@@ -39,7 +39,7 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 20px;  /* Smaller font size */
-    line-height: 0.1; /* Forces a tighter line height */
+    line-height: 5; /* Forces a tighter line height */
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
 }
