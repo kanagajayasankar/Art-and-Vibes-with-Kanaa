@@ -331,8 +331,12 @@ nav ul li a:hover {
 
 .gallery-container h2{
     text-align: center; /* Centers the title */
-    margin: 20px 0; /* Adds vertical spacing */
+    margin-bottom: 20px;
+    margin-top: 20px;/* Adds vertical spacing */
     overflow: visible; /* Ensures the title isn't hidden */
+    font-size: 2rem;
+    color: #333;
+    z-index: 5; /* Ensures it stays visible */
 }
 
 /* 🔹 Horizontal Scroll */
