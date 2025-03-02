@@ -496,6 +496,7 @@ scroll-btn.right {
     text-align: center;
     scroll-snap-align: center;
     scroll-behavior: smooth;
+    flex-wrap: nowrap; /* Prevent wrapping so items stay in one row */
 }
 
 
