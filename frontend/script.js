@@ -125,4 +125,14 @@ document.querySelectorAll("nav a").forEach(anchor => {
         }
     });
 });
+/*toggle the mobile menu*/
+document.getElementById('hamburger').addEventListener('click', function() {
+  var menu = document.getElementById('navMenu');
+  if (menu.style.display === 'block') {
+    menu.style.display = 'none';
+  } else {
+    menu.style.display = 'block';
+  }
+});
+
 
