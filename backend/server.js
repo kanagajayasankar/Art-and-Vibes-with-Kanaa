@@ -53,22 +53,50 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-app.get('/test-email', async (req, res) => {
-    try {
-        let info = await transporter.sendMail({
-            from: `"Test Email" <${process.env.EMAIL_USER}>`,
-            to: process.env.EMAIL_USER, // Send test email to yourself
-            subject: "Test Email from Server",
-            text: "This is a test email to check if SMTP is working."
-        });
+app.post("/send-enquiry", async (req, res) => {
+  const { name, email, message } = req.body;
 
-        console.log("Test email sent:", info.response);
-        res.send("Test email sent successfully!");
-    } catch (error) {
-        console.error("Error sending test email:", error);
-        res.status(500).send("Failed to send test email.");
-    }
+  // Basic server-side validation
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: "Please fill out all fields." });
+  }
+  
+  // Optional: add further email validation using a regex here
+
+  const mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: "art-and-vibes-with-kanaa@outlook.com", // The email to receive enquiries
+    subject: "New Enquiry from Art and Vibes Website",
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ message: "Enquiry sent successfully." });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).json({ error: "Failed to send enquiry." });
+  }
 });
+
+// Serve about.html correctly
+app.get("/about", (req, res) => {
+  res.sendFile("/opt/render/project/src/frontend/about.html");
+});
+
+// Serve index.html for all other routes
+app.get("*", (req, res) => {
+  res.sendFile("/opt/render/project/src/frontend/index.html");
+});
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+
+
+
 
 transporter.verify(function(error, success) {
   if (error) {
