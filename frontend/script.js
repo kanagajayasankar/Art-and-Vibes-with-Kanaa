@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             <div class="card-inner">
                 <div class="card-front">
                     <img src="${activity.image}" alt="${activity.name}" class="activity-image">
-                    <p class="activity-name">${activity.name}</p> <!--inside card front -->
+                    <p class="activity-name">${activity.name}</p>
                 </div>
                 <div class="card-back">
                     <h3>${activity.name}</h3>
@@ -23,10 +23,13 @@ document.addEventListener("DOMContentLoaded", async function () {
             </div>
         `;
 
-        // Flip effect
-        card.addEventListener("click", () => {
-            card.classList.toggle("flipped");
-        });
+        // If the device supports touch, add click event for mobile
+        if ('ontouchstart' in window || navigator.maxTouchPoints) {
+            card.addEventListener("click", () => {
+                card.classList.toggle("flipped");
+            });
+        }
+        // On desktop, the hover rule in CSS will handle the flip.
 
         cardContainer.appendChild(card);
     });
