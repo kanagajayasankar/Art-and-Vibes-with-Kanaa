@@ -220,6 +220,11 @@ nav ul li a:hover {
     overflow: visible;
 }
 
+.activity-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+
 .activities-container h2,
 #contact h2 {
     font-family: 'Playfair Display', serif;
