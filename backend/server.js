@@ -39,18 +39,18 @@ app.get("/activities", (req, res) => {
   ]);
 });
 
-// Create a Nodemailer transporter for Resend
+// Create Nodemailer transporter using Resend
 const transporter = nodemailer.createTransport({
-  host: "smtp.resend.com",  // Resend's SMTP host
+  host: "smtp.resend.com",
   port: 587,
   secure: false,
   auth: {
-    user: "apikey", // This literal string is required by Resend
-    pass: process.env.RESEND_API_KEY // Your Resend API key (set in Render)
+    user: "apikey", // Literal string as required by Resend
+    pass: process.env.RESEND_API_KEY
   }
 });
 
-// POST endpoint for enquiry form submission using Resend
+// POST endpoint for enquiry form submission
 app.post("/send-enquiry", async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -60,8 +60,8 @@ app.post("/send-enquiry", async (req, res) => {
   }
   
   const mailOptions = {
-    from: process.env.EMAIL_USER, // Ensure this is set to your sender email
-    to: "art-and-vibes-with-kanaa@outlook.com", // The email to receive enquiries
+    from: process.env.EMAIL_USER, // Must be a verified sender in Resend
+    to: "art-and-vibes-with-kanaa@outlook.com", // Your receiving email
     subject: "New Enquiry from Art and Vibes Website",
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
   };
@@ -75,31 +75,14 @@ app.post("/send-enquiry", async (req, res) => {
   }
 });
 
-// Optional: Test email endpoint to verify your configuration
-app.get("/test-email", async (req, res) => {
-  try {
-    const info = await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // For testing, send it to yourself
-      subject: "Test Email from Art and Vibes",
-      text: "This is a test email to verify Resend SMTP integration."
-    });
-    console.log("Test email sent:", info.response);
-    res.send("Test email sent successfully!");
-  } catch (error) {
-    console.error("Error sending test email:", error);
-    res.status(500).send("Failed to send test email.");
-  }
-});
-
 // Serve about.html correctly
 app.get("/about", (req, res) => {
-  res.sendFile(path.join("/opt/render/project/src/frontend", "about.html"));
+  res.sendFile("/opt/render/project/src/frontend/about.html");
 });
 
-// Serve index.html for all other routes (Single Page Application fallback)
+// Serve index.html for all other routes
 app.get("*", (req, res) => {
-  res.sendFile(path.join("/opt/render/project/src/frontend", "index.html"));
+  res.sendFile("/opt/render/project/src/frontend/index.html");
 });
 
 // Start the server
