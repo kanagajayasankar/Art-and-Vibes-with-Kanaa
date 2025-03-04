@@ -1,12 +1,57 @@
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking - Art and Vibes with Kanaa</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include your Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation (reuse same header as other pages) -->
+  <header>
+    <nav>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#activities">Activities</a></li>
+        <li><a href="index.html#gallery-experience">Gallery</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <!-- (If you already have a mobile hamburger menu, keep that code too) -->
+    </nav>
+  </header>
+
+  <!-- Booking Section -->
+  <section class="booking-container">
+    <h1>Book Your Experience</h1>
+    <!-- The activity name is read from the URL query parameter (set when "Book Now" is clicked) -->
+    <p>You are booking: <span id="selected-activity"></span></p>
+    <form class="booking-form" action="/send-booking" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone" required>
+      <textarea name="message" placeholder="Additional Details" required></textarea>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <!-- Footer (reuse same footer as other pages) -->
+  <footer>
+    <p>&copy; 2025 Art and Vibes. All rights reserved.</p>
+  </footer>
+
+  <!-- Script to retrieve the activity name from the URL and display it -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
       const urlParams = new URLSearchParams(window.location.search);
       const activityName = urlParams.get("activity");
-
       if (activityName) {
-          document.getElementById("selected-activity").textContent = activityName;
+        document.getElementById("selected-activity").textContent = activityName;
       }
-  });
-</script>
-
-<h2>You are booking: <span id="selected-activity"></span></h2>
+    });
+  </script>
+</body>
+</html>
