@@ -207,17 +207,18 @@
     <div class="enquiry-form">
       <h2>Enquiry Form</h2>
       <form class="contact-form" 
-            action="https://formsubmit.co/el/puluki" 
-            method="POST">
-        <!-- Optional: Redirect to a thank-you page after submission -->
-        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+         action="https://formsubmit.co/el/puluki" 
+         method="POST">
         <!-- Optional: Disable CAPTCHA -->
         <input type="hidden" name="_captcha" value="false">
+        <!-- Optional: Redirect after submission -->
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send</button>
-      </form>
+    </form>
+
     </div>
 
     <!-- Contact Info -->
