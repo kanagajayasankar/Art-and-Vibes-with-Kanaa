@@ -135,4 +135,46 @@ document.getElementById('hamburger').addEventListener('click', function() {
   }
 });
 
+// Enquiry form submission
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.querySelector(".contact-form");
+  if (!contactForm) return;
+
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Retrieve input values
+    const name = contactForm.querySelector('input[type="text"]').value.trim();
+    const email = contactForm.querySelector('input[type="email"]').value.trim();
+    const message = contactForm.querySelector('textarea').value.trim();
+
+    // Basic client-side validation
+    if (!name || !email || !message) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    try {
+      const response = await fetch("/send-enquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email, message })
+      });
+      const data = await response.json();
+      if (response.ok) {
+        alert(data.message);
+        contactForm.reset();
+      } else {
+        alert("Error: " + data.error);
+      }
+    } catch (err) {
+      console.error(err);
+      alert("An error occurred while sending your enquiry.");
+    }
+  });
+});
+
+
 
