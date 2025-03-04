@@ -93,18 +93,19 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-
-
-
-
-transporter.verify(function(error, success) {
-  if (error) {
-    console.error("Transporter error:", error);
-  } else {
-    console.log("Server is ready to send messages");
+const transporter = nodemailer.createTransport({
+  host: "smtp.office365.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  },
+  tls: {
+    ciphers: 'SSLv3'
   }
 });
 
 
-// POST endpoint for enquiry form submission
+
+
