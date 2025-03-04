@@ -466,7 +466,7 @@ nav ul li a:hover {
 /* Review Slider Wrapper */
 .review-slider-wrapper {
     position: relative;
-    width: 100%;
+    width: 90%;
     margin: auto;
     margin-bottom: 40px;
 }
