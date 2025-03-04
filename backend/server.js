@@ -39,14 +39,14 @@ app.get("/activities", (req, res) => {
   ]);
 });
 
-// Create Nodemailer transporter using Resend
+// Create a Nodemailer transporter using Resend
 const transporter = nodemailer.createTransport({
   host: "smtp.resend.com",
   port: 587,
   secure: false,
   auth: {
-    user: "apikey", // Literal string as required by Resend
-    pass: process.env.RESEND_API_KEY
+    user: "apikey", // Literal string required by Resend
+    pass: process.env.RESEND_API_KEY // Your Resend API key from environment variable
   }
 });
 
@@ -58,20 +58,22 @@ app.post("/send-enquiry", async (req, res) => {
   if (!name || !email || !message) {
     return res.status(400).json({ error: "Please fill out all fields." });
   }
-  
+
   const mailOptions = {
     from: process.env.EMAIL_USER, // Must be a verified sender in Resend
-    to: "art-and-vibes-with-kanaa@outlook.com", // Your receiving email
+    to: "art-and-vibes-with-kanaa@outlook.com", // The email to receive enquiries
     subject: "New Enquiry from Art and Vibes Website",
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
   };
 
   try {
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info);
     res.status(200).json({ message: "Enquiry sent successfully." });
   } catch (error) {
     console.error("Error sending email:", error);
-    res.status(500).json({ error: "Failed to send enquiry." });
+    // Optionally, log error.response if available
+    res.status(500).json({ error: "Failed to send enquiry. " + error.message });
   }
 });
 
