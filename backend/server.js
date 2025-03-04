@@ -38,6 +38,11 @@ app.get("/activities", (req, res) => {
   ]);
 });
 
+// Serve booking.html for the booking page
+app.get("/booking", (req, res) => {
+  res.sendFile("/opt/render/project/src/frontend/booking.html");
+});
+
 // Serve about.html correctly
 app.get("/about", (req, res) => {
   res.sendFile("/opt/render/project/src/frontend/about.html");
