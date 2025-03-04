@@ -94,17 +94,31 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 const transporter = nodemailer.createTransport({
-  host: "smtp.office365.com",
+  host: "smtp.resend.com",  // Resend's SMTP host
   port: 587,
   secure: false,
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  },
-  tls: {
-    ciphers: 'SSLv3'
+    user: "apikey", // This is a literal string required by Resend
+    pass: process.env.RESEND_API_KEY
   }
 });
+
+app.get("/test-email", async (req, res) => {
+  try {
+    const info = await transporter.sendMail({
+      from: process.env.EMAIL_USER,  // Make sure this is set to your sender email
+      to: process.env.EMAIL_USER,    // For testing, send it to yourself
+      subject: "Test Email from Art and Vibes",
+      text: "This is a test email to verify Resend SMTP integration."
+    });
+    console.log("Test email sent:", info.response);
+    res.send("Test email sent successfully!");
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).send("Failed to send test email.");
+  }
+});
+
 
 
 
