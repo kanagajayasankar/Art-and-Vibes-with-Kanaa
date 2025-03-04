@@ -53,8 +53,34 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+app.get('/test-email', async (req, res) => {
+    try {
+        let info = await transporter.sendMail({
+            from: `"Test Email" <${process.env.EMAIL_USER}>`,
+            to: process.env.EMAIL_USER, // Send test email to yourself
+            subject: "Test Email from Server",
+            text: "This is a test email to check if SMTP is working."
+        });
+
+        console.log("Test email sent:", info.response);
+        res.send("Test email sent successfully!");
+    } catch (error) {
+        console.error("Error sending test email:", error);
+        res.status(500).send("Failed to send test email.");
+    }
+});
+
+transporter.verify(function(error, success) {
+  if (error) {
+    console.error("Transporter error:", error);
+  } else {
+    console.log("Server is ready to send messages");
+  }
+});
+
+
 // POST endpoint for enquiry form submission
-app.post("/send-enquiry", async (req, res) => {
+/*app.post("/send-enquiry", async (req, res) => {
   const { name, email, message } = req.body;
 
   // Basic server-side validation
@@ -95,11 +121,5 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-transporter.verify(function(error, success) {
-  if (error) {
-    console.error("Transporter error:", error);
-  } else {
-    console.log("Server is ready to send messages");
-  }
-});
+
 
