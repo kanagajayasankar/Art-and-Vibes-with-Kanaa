@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <div class="card-back">
                     <h3>${activity.name}</h3>
                     <p>${activity.description}</p>
-                    <button class="book-now">Book Now</button>
+                    <button class="book-now" data-activity="${activity.name}">Book Now</button>
                 </div>
             </div>
         `;
@@ -29,11 +29,21 @@ document.addEventListener("DOMContentLoaded", async function () {
                 card.classList.toggle("flipped");
             });
         }
-        // On desktop, the hover rule in CSS will handle the flip.
+        
+        // Attach event listener to the Book Now button
+        const bookNowButton = card.querySelector(".book-now");
+        bookNowButton.addEventListener("click", (event) => {
+            event.stopPropagation(); // Prevent flipping when clicking the button
+            const activityName = event.target.getAttribute("data-activity");
+
+            // Redirect to booking page with the activity name as a query parameter
+            window. location.href = `booking.html?activity=${encodeURIComponent(activityName)}`;
+        });
 
         cardContainer.appendChild(card);
     });
 });
+
 
 // Smooth Scroll for Navigation
 document.querySelectorAll("nav a").forEach(anchor => {
