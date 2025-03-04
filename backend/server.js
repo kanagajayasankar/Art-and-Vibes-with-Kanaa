@@ -94,3 +94,12 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+transporter.verify(function(error, success) {
+  if (error) {
+    console.error("Transporter error:", error);
+  } else {
+    console.log("Server is ready to send messages");
+  }
+});
+
