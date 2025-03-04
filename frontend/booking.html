@@ -1,1 +1,12 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const activityName = urlParams.get("activity");
 
+      if (activityName) {
+          document.getElementById("selected-activity").textContent = activityName;
+      }
+  });
+</script>
+
+<h2>You are booking: <span id="selected-activity"></span></h2>
