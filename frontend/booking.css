@@ -1,15 +1,15 @@
 /* booking.css */
 
-/* General Styles */
+/* Global Reset & Styles */
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  scroll-behavior: smooth;
+  background: #f8f8f8;
   overflow-x: hidden;
 }
 
-/* Navigation */
+/* Header (You can adjust or reuse your existing header styles) */
 header {
   background: rgba(0, 0, 0, 0.8);
   padding: 5px 0;
@@ -26,157 +26,101 @@ nav ul {
   padding: 0.5rem 0;
 }
 nav ul li {
-  margin: 5px 10px;
+  margin: 0 10px;
 }
 nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 20px;
-  padding: 5px 10px;
-  font-family: 'Montserrat', sans-serif;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #f4b400;
 }
 
 /* Booking Container */
 .booking-container {
-  max-width: 800px;
-  margin: 100px auto 40px; /* Top margin to clear fixed header */
+  max-width: 600px;
+  margin: 120px auto 40px; /* Top margin clears fixed header */
   padding: 20px;
-  background: #f8f8f8;
+  background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
 }
-
 .booking-container h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
   margin-bottom: 20px;
 }
 
 /* Booking Form */
-.booking-form form {
+#bookingForm {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
-
-.booking-form label {
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.form-group label {
   font-weight: bold;
-  margin-top: 15px;
   margin-bottom: 5px;
+  color: #333;
 }
-
-.booking-form input,
-.booking-form textarea,
-.booking-form select {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-/* People Control */
-.people-control {
+/* Number Input Styling */
+.number-group .number-input {
   display: flex;
   align-items: center;
 }
-
-.people-control input[type="number"] {
-  width: 60px;
-  text-align: center;
-  margin: 0 10px;
-}
-
-.arrow-btn {
-  cursor: pointer;
+.number-group .number-input button {
+  background: #f39c12;
+  color: #fff;
+  border: none;
   padding: 5px 10px;
-  background: #f39c12;
-  color: #fff;
-  border-radius: 3px;
-  user-select: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.number-group .number-input input {
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  width: 60px;
 }
 
-/* Proceed Payment Button */
-#proceedPayment {
+/* Booking Button */
+.booking-btn {
   background: #f39c12;
-  color: #fff;
+  color: white;
   padding: 12px;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
-  margin-top: 20px;
 }
-
-#proceedPayment:hover {
+.booking-btn:hover {
   background: #e67e22;
 }
 
-/* Payment Section */
-.payment-section {
-  display: none;
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.payment-details, .payment-action {
-  flex: 1;
-  min-width: 280px;
-  margin: 10px 0;
-}
-
-.payment-details h2, .payment-action h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.payment-action button {
-  background: #f39c12;
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.payment-action button:hover {
-  background: #e67e22;
-}
-
-/* Admin Panel */
-.admin-section {
-  display: none;
-  background: #eee;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-.admin-toggle {
-  cursor: pointer;
-  color: #f39c12;
-  text-decoration: underline;
-  margin-top: 10px;
+/* Footer */
+footer {
   text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .booking-container {
-    margin: 60px 10px 20px;
-    padding: 15px;
-  }
-  .payment-section {
-    flex-direction: column;
-    align-items: center;
-  }
+  padding: 20px;
+  background: #333;
+  color: white;
+  font-size: 0.9rem;
 }
