@@ -1,0 +1,137 @@
+/* Booking Page Styles */
+.booking-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Booking Form */
+.booking-form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.booking-form h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.booking-form label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="number"],
+.booking-form textarea,
+.booking-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Number Input with Arrow Buttons */
+.number-input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.number-input input[type="number"] {
+  text-align: center;
+  flex: 1;
+}
+
+.number-input button {
+  background: #f39c12;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.number-input button:hover {
+  background: #e67e22;
+}
+
+/* Booking Summary – Payment Page Layout */
+.booking-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.booking-summary .details {
+  flex: 1;
+  margin-right: 20px;
+  font-size: 1rem;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.booking-summary .payment {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-summary .payment a {
+  background: #f39c12;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.3s;
+}
+
+.booking-summary .payment a:hover {
+  background: #e67e22;
+}
+
+/* Admin Date Management (hidden by default) */
+.admin-date-management {
+  display: none; /* Toggle this section via your admin controls */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .booking-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+  .booking-summary .details,
+  .booking-summary .payment {
+    margin: 10px 0;
+  }
+}
