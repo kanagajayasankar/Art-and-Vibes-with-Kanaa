@@ -1,59 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking - Art and Vibes with Kanaa</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Include your Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking – Art and Vibes with Kanaa</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Additional booking-specific styling can go here or in styles.css -->
+  <style>
+    /* Booking Page Specific Styles */
+    .booking-container {
+      background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .booking-container h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .booking-form {
+      background: #fff;
+      padding: 20px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+      text-align: left;
+    }
+    .booking-form label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 5px;
+      display: block;
+      color: #333;
+    }
+    .booking-form input,
+    .booking-form select,
+    .booking-form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #f39c12;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .booking-form button:hover {
+      background: #e67e22;
+    }
+    /* Number input with arrows */
+    .number-input-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .number-input-wrapper button {
+      width: 40px;
+      height: 40px;
+      background: #f39c12;
+      color: #fff;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .number-input-wrapper input {
+      text-align: center;
+      margin: 0 10px;
+      width: 60px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation (reuse same header as other pages) -->
+  <!-- (Reuse your header navigation as needed) -->
   <header>
     <nav>
-      <ul class="nav-menu" id="navMenu">
+      <ul class="nav-menu">
         <li><a href="index.html#home">Home</a></li>
         <li><a href="index.html#activities">Activities</a></li>
         <li><a href="index.html#gallery-experience">Gallery</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
-      <!-- (If you already have a mobile hamburger menu, keep that code too) -->
     </nav>
   </header>
 
-  <!-- Booking Section -->
   <section class="booking-container">
     <h1>Book Your Experience</h1>
-    <!-- The activity name is read from the URL query parameter (set when "Book Now" is clicked) -->
-    <p>You are booking: <span id="selected-activity"></span></p>
-    <form class="booking-form" action="/send-booking" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Your Phone" required>
-      <textarea name="message" placeholder="Additional Details" required></textarea>
-      <button type="submit">Submit Booking</button>
+    <form class="booking-form" id="bookingForm">
+      <!-- Activity (read-only; optionally filled from the URL query parameter) -->
+      <label for="activity">Activity</label>
+      <input type="text" id="activity" name="activity" value="Van Gogh Painting" readonly />
+
+      <!-- Number of People with arrow buttons -->
+      <label for="people">Number of People</label>
+      <div class="number-input-wrapper">
+        <button type="button" id="decrement">−</button>
+        <input type="number" id="people" name="people" value="1" min="1" readonly />
+        <button type="button" id="increment">+</button>
+      </div>
+
+      <!-- Date selection using a dropdown (you can later populate this dynamically) -->
+      <label for="date">Select Date</label>
+      <select id="date" name="date" required>
+        <option value="">--Select Date--</option>
+        <option value="2025-04-10">April 10, 2025</option>
+        <option value="2025-04-15">April 15, 2025</option>
+        <option value="2025-04-20">April 20, 2025</option>
+      </select>
+
+      <!-- Proceed with Payment button -->
+      <button type="submit">Proceed with Payment</button>
     </form>
   </section>
 
-
-
-  <!-- Script to retrieve the activity name from the URL and display it -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      const activityName = urlParams.get("activity");
-      if (activityName) {
-        document.getElementById("selected-activity").textContent = activityName;
+    // Increment/Decrement number of people
+    const incrementBtn = document.getElementById('increment');
+    const decrementBtn = document.getElementById('decrement');
+    const peopleInput = document.getElementById('people');
+
+    incrementBtn.addEventListener('click', () => {
+      peopleInput.value = parseInt(peopleInput.value) + 1;
+    });
+    decrementBtn.addEventListener('click', () => {
+      if (parseInt(peopleInput.value) > 1) {
+        peopleInput.value = parseInt(peopleInput.value) - 1;
       }
     });
-  </script>
-  <footer>
-        <p>&copy; 2025 Art and Vibes. All rights reserved.</p>
-    </footer>
-    <script src="script.js" defer></script>
 
+    // Handle booking form submission and redirect to payment page with query parameters
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const activity = document.getElementById('activity').value;
+      const people = document.getElementById('people').value;
+      const date = document.getElementById('date').value;
+      if (!date) {
+        alert('Please select a date');
+        return;
+      }
+      // Redirect to payment page with booking details as query parameters
+      window.location.href = `payment.html?activity=${encodeURIComponent(activity)}&people=${people}&date=${date}`;
+    });
+  </script>
 </body>
 </html>
