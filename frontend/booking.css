@@ -116,6 +116,15 @@ nav ul li a:hover {
   background: #e67e22;
 }
 
+.deposit-message {
+  font-size: 1rem;
+  color: #d35400; /* A warm orange shade to match the booking button */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
 /* Footer */
 footer {
   text-align: center;
