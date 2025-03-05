@@ -1,11 +1,11 @@
 // booking.js
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Increment/Decrement for Number of People
   const decrementBtn = document.getElementById("decrement");
   const incrementBtn = document.getElementById("increment");
   const numPeopleInput = document.getElementById("numPeople");
 
+  // Increment/Decrement for Number of People
   decrementBtn.addEventListener("click", function () {
     let currentValue = parseInt(numPeopleInput.value, 10);
     if (currentValue > 1) {
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const bookingData = {
       name: document.getElementById("name").value.trim(),
       email: document.getElementById("email").value.trim(),
-      numPeople: document.getElementById("numPeople").value,
+      numPeople: parseInt(document.getElementById("numPeople").value, 10),
       bookingDate: document.getElementById("bookingDate").value,
     };
 
-    // For demonstration, save bookingData to localStorage
+    // Save bookingData to localStorage
     localStorage.setItem("bookingData", JSON.stringify(bookingData));
 
-    // Redirect to payment page (assume payment.html exists)
+    // Redirect to payment page
     window.location.href = "payment.html";
   });
 });
