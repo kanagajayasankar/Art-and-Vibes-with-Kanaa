@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment – Art and Vibes with Kanaa</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Payment Page Specific Styles */
+    .payment-container {
+      background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .payment-container h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .payment-details {
+      background: #fff;
+      padding: 20px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .payment-details p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      margin: 10px 0;
+      color: #555;
+    }
+    .payment-button {
+      background: #f39c12;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .payment-button:hover {
+      background: #e67e22;
+    }
+  </style>
+</head>
+<body>
+  <!-- Reuse your header navigation -->
+  <header>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#activities">Activities</a></li>
+        <li><a href="index.html#gallery-experience">Gallery</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="payment-container">
+    <h1>Payment Details</h1>
+    <div class="payment-details" id="paymentDetails">
+      <!-- Booking details will be inserted here via JavaScript -->
+    </div>
+    <button class="payment-button" id="payButton">Pay Deposit</button>
+  </section>
+
+  <script>
+    // Retrieve query parameters from URL
+    function getQueryParams() {
+      const params = {};
+      const queryString = window.location.search.slice(1);
+      queryString.split('&').forEach(pair => {
+        const [key, value] = pair.split('=');
+        params[key] = decodeURIComponent(value);
+      });
+      return params;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const params = getQueryParams();
+      const activity = params.activity || "Unknown Activity";
+      const people = parseInt(params.people) || 1;
+      const date = params.date || "Not selected";
+      
+      // Calculate deposit (20€ per person)
+      const deposit = people * 20;
+      
+      const detailsDiv = document.getElementById("paymentDetails");
+      detailsDiv.innerHTML = `
+        <p><strong>Activity:</strong> ${activity}</p>
+        <p><strong>Date:</strong> ${date}</p>
+        <p><strong>Number of People:</strong> ${people}</p>
+        <p><strong>Deposit (20€ per person):</strong> €${deposit}</p>
+      `;
+      
+      // For now, clicking the button will alert a message (replace with real payment integration)
+      document.getElementById("payButton").addEventListener("click", function() {
+        alert("Payment processing... (This is a placeholder)");
+      });
+    });
+  </script>
+</body>
+</html>
