@@ -1,0 +1,83 @@
+/* payment.css */
+
+/* Basic Reset & Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #f8f8f8;
+  overflow-x: hidden;
+}
+
+/* Header (You can reuse your existing header styles if desired) */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+nav ul li {
+  margin: 0 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+/* Payment Container */
+.payment-container {
+  max-width: 800px;
+  margin: 120px auto 40px; /* Top margin to clear fixed header */
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Payment Details & Action */
+.payment-details, .payment-action {
+  margin: 20px 0;
+}
+.payment-details h2, .payment-action h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+#bookingSummary p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+#payDeposit {
+  background: #f39c12;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#payDeposit:hover {
+  background: #e67e22;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
