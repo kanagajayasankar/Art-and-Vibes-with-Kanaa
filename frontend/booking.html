@@ -4,80 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Booking - Art and Vibes with Kanaa</title>
-  <!-- Link to your booking CSS -->
   <link rel="stylesheet" href="booking.css" />
-  <!-- (Optionally, also include your global styles if needed) -->
+  <!-- You can also include your global fonts if needed -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation (reuse your common navigation if desired) -->
+  <!-- Navigation (reuse your header if desired) -->
   <header>
     <nav>
       <ul>
         <li><a href="index.html#home">Home</a></li>
         <li><a href="index.html#activities">Activities</a></li>
         <li><a href="index.html#gallery-experience">Gallery</a></li>
-        <li><a href="about.html">About Me</a></li>
+        <li><a href="/about.html" target="_self">About Me</a></li>
         <li><a href="index.html#contact">Contact</a></li>
         <li><a href="booking.html" class="active">Booking</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Booking Form Container -->
+  <!-- Booking Form Section -->
   <main class="booking-container">
     <h1>Book Your Workshop</h1>
-    <div class="booking-form">
-      <form id="bookingForm">
-        <label for="customerName">Your Name</label>
-        <input type="text" id="customerName" name="customerName" placeholder="Enter your name" required />
-
-        <label for="customerEmail">Your Email</label>
-        <input type="email" id="customerEmail" name="customerEmail" placeholder="Enter your email" required />
-
-        <label for="numPeople">Number of People</label>
-        <div class="people-control">
-          <span class="arrow-btn" id="decreasePeople">-</span>
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Your Email" />
+      </div>
+      <div class="form-group number-group">
+        <label for="numPeople">Number of People:</label>
+        <div class="number-input">
+          <button type="button" id="decrement">-</button>
           <input type="number" id="numPeople" name="numPeople" value="1" min="1" required />
-          <span class="arrow-btn" id="increasePeople">+</span>
+          <button type="button" id="increment">+</button>
         </div>
-
-        <label for="bookingDate">Select Date</label>
+      </div>
+      <div class="form-group">
+        <label for="bookingDate">Select Date:</label>
         <input type="date" id="bookingDate" name="bookingDate" required />
-
-        <!-- Button to proceed -->
-        <button type="button" id="proceedPayment">Proceed with Payment</button>
-      </form>
-    </div>
-
-    <!-- Payment Section (initially hidden) -->
-    <div class="payment-section" id="paymentSection">
-      <div class="payment-details">
-        <h2>Your Booking Details</h2>
-        <p id="bookingSummary"></p>
       </div>
-      <div class="payment-action">
-        <h2>Pay Deposit</h2>
-        <button id="payDeposit">Pay Now</button>
-      </div>
-    </div>
-
-    <!-- Admin Panel for available dates (hidden by default) -->
-    <div class="admin-section" id="adminSection">
-      <h3>Admin Panel: Manage Available Dates</h3>
-      <form id="adminForm">
-        <label for="availableDates">Enter Available Dates (comma-separated, YYYY-MM-DD)</label>
-        <input type="text" id="availableDates" name="availableDates" placeholder="2025-03-10,2025-03-15,2025-03-20" />
-        <button type="submit">Update Dates</button>
-      </form>
-    </div>
-    <p class="admin-toggle" id="adminToggle">Toggle Admin Panel</p>
+      <button type="submit" class="booking-btn">Start Booking</button>
+    </form>
   </main>
 
   <footer>
     <p>&copy; 2025 Art and Vibes with Kanaa. All rights reserved.</p>
   </footer>
 
-  <!-- Link to your booking JavaScript file -->
   <script src="booking.js" defer></script>
 </body>
 </html>
