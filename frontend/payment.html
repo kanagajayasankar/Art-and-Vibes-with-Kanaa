@@ -1,49 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment - Art and Vibes with Kanaa</title>
-  <link rel="stylesheet" href="payment.css" />
-  <!-- Optionally include your global styles if needed -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - Art and Vibes</title>
+  <link rel="stylesheet" href="payment.css">
 </head>
 <body>
-  <!-- Common Navigation (you can reuse your header code) -->
+
   <header>
     <nav>
       <ul>
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#activities">Activities</a></li>
-        <li><a href="index.html#gallery-experience">Gallery</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="booking.html">Booking</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="booking.html">Back to Booking</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Payment Container -->
   <main class="payment-container">
-    <section class="payment-details">
-      <h2>Your Booking Details</h2>
-      <!-- In a real app, you might pass data via URL parameters or localStorage -->
-      <div id="bookingSummary">
-        <!-- Example summary (to be dynamically filled) -->
-        <p><strong>Name:</strong> John Doe</p>
-        <p><strong>Email:</strong> john@example.com</p>
-        <p><strong>Date:</strong> 2025-03-15</p>
-        <p><strong>Number of People:</strong> 3</p>
-        <p><strong>Total Deposit:</strong> €60</p>
-      </div>
-    </section>
-    <section class="payment-action">
-      <h2>Proceed with Payment</h2>
-      <button id="payDeposit">Pay Deposit</button>
-    </section>
+    <h1>Complete Your Booking</h1>
+
+    <div class="payment-details">
+      <h2>Booking Details</h2>
+      <div id="bookingDetails"></div>
+    </div>
+
+    <div class="payment-amount">
+      <h2>Total Deposit</h2>
+      <p id="paymentAmount">€0</p>
+      <button id="proceedPayment">Proceed to Payment</button>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Art and Vibes with Kanaa. All rights reserved.</p>
+    <p>&copy; 2025 Art and Vibes. All rights reserved.</p>
   </footer>
 
   <script src="payment.js" defer></script>
