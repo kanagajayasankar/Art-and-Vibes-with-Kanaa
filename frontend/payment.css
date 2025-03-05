@@ -1,83 +1,82 @@
 /* payment.css */
 
-/* Basic Reset & Global Styles */
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   background: #f8f8f8;
-  overflow-x: hidden;
 }
 
-/* Header (You can reuse your existing header styles if desired) */
 header {
   background: rgba(0, 0, 0, 0.8);
-  padding: 5px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+  padding: 10px 0;
+  text-align: center;
 }
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0.5rem 0;
+  padding: 0;
 }
 nav ul li {
-  margin: 0 10px;
+  display: inline;
+  margin: 0 15px;
 }
 nav ul li a {
-  text-decoration: none;
   color: white;
-  font-size: 20px;
+  text-decoration: none;
 }
 
-/* Payment Container */
 .payment-container {
   max-width: 800px;
-  margin: 120px auto 40px; /* Top margin to clear fixed header */
+  margin: 50px auto;
   padding: 20px;
-  background: #fff;
+  background: linear-gradient(to bottom, #e1bee7, #f8d7e3);
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
-/* Payment Details & Action */
-.payment-details, .payment-action {
+.payment-details, .payment-amount {
+  background: white;
+  padding: 15px;
   margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-.payment-details h2, .payment-action h2 {
+
+h1, h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
   color: #333;
-  margin-bottom: 10px;
 }
-#bookingSummary p {
+
+p {
   font-size: 1rem;
   color: #555;
-  margin: 5px 0;
 }
-#payDeposit {
+
+#paymentAmount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+button {
   background: #f39c12;
-  color: #fff;
-  padding: 12px 20px;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
 }
-#payDeposit:hover {
+button:hover {
   background: #e67e22;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
   background: #333;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
 }
